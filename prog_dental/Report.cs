@@ -58,13 +58,11 @@ namespace prog_dental
 
         private void نمایشاطلاعاتToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            PatientInfo pi = blr.Read(id);
+            User pi = blr.Read(id);
             labelX13.Text = pi.Name;
-            labelX14.Text = pi.HCode;
+            labelX14.Text = pi.CodeMelli;
             labelX19.Text = pi.TimeEnter;
             labelX15.Text = pi.FatherName;
-            labelX20.Text = pi.PatientProblem;
-            labelX12.Text = pi.NParvandeh;
             labelX16.Text = pi.PhoneNumber;
             labelX17.Text = pi.Moaref;
             labelX18.Text = pi.Jop;

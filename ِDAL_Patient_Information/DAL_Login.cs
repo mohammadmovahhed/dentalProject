@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using _DAL_Patient_Information;
+﻿using System.Linq;
 using BE_ProgDental;
 
-namespace _ِDAL_Patient_Information
+namespace DAL_Prog_Dental
 {
-   public class DAL_Login
+    public class DAL_Login
     {
         DB_Support dbl = new DB_Support();
         public byte Login(string username, string password)

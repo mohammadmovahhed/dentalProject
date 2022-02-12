@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Drawing;
-using System.Data;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevComponents.DotNetBar.Controls;
 using BE_ProgDental;
@@ -72,21 +67,22 @@ namespace prog_dental
                 //ادرس ، نام ، عکس را بگیر و در پوشه ذخیرش کن
                 string filePath = f.FileName;
                 File.Copy(filePath, AppPath + IName);
+                //ادرس جدید ذخیره عکس
+                return AppPath + IName;
             }
             catch (Exception exp)
             {
-                MessageBox.Show("Unable To Save File" + exp.Message);
+                MessageBox.Show("امکان ذخیره فایل وجود ندارد" + exp.Message);
+                return null;
             }
-            //ادرس جدید ذخیره عکس
-            return AppPath + IName;
         }
 
 
         private void Guna2GradientButton1_Click(object sender, EventArgs e)
         {
-            
+
             var a = groupBox1.Controls.OfType<TextBoxX>().Any(i => i.Text == "");
-            if (a)  
+            if (a)
             {
                 MessageBox.Show("لطفا ابتدا تمام اطلاعات را تکمیل کنید");
             }
@@ -106,14 +102,13 @@ namespace prog_dental
                     PictureAddress = SavePic(textBoxX2.Text)
                 };
 
-                if (flag)
+                if (flag && SavePic(textBoxX2.Text) != null)
                 {
                     MessageBox.Show(bll.Create(doc));
                 }
                 else if (!flag)
                 {
                     MessageBox.Show(bll.Update(doc, id));
-                    flag = true;
                     guna2GradientButton1.Text = "ثبت دکتر";
                 }
                 SetDataGrid();
@@ -125,7 +120,7 @@ namespace prog_dental
 
         private void DataGridViewX1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-             id = Convert.ToInt32(dataGridViewX1.Rows[dataGridViewX1.CurrentRow.Index].Cells["id"].Value);
+            id = Convert.ToInt32(dataGridViewX1.Rows[dataGridViewX1.CurrentRow.Index].Cells["id"].Value);
 
             Doctor doctor = bll.Read(id);
             labelX1.Text = doctor.Name;
@@ -155,7 +150,7 @@ namespace prog_dental
             }
         }
 
-        
+
 
         private void ویرایشToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -174,7 +169,7 @@ namespace prog_dental
             //Clear();
         }
 
-       
+
 
         private void حذفToolStripMenuItem_Click(object sender, EventArgs e)
         {

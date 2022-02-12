@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using _DAL_Patient_Information;
 using BE_ProgDental;
 
-namespace _ِDAL_Patient_Information
+namespace DAL_Prog_Dental
 {
     public class DAL_Doctor
     {

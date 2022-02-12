@@ -1,25 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using _DAL_Patient_Information;
 using BE_ProgDental;
 
 
-namespace _ِDAL_Patient_Information
+namespace DAL_Prog_Dental
 {
-  public  class Dal_Report
+    public  class Dal_Report
     {
         DB_Support db = new DB_Support();
-        public List<PatientInfo> Read(string patientss)
+        public List<User> Read(string patientss)
         {
-            return db.PatientInfos.Where(i => i.Name.Contains(patientss) || i.HCode.Contains(patientss)).ToList();
+            return db.Users.Where(i => i.Name.Contains(patientss) || i.CodeMelli.Contains(patientss)).ToList();
         }
 
-       public PatientInfo Read(int id)
+       public User Read(int id)
         {
-            var q = db.PatientInfos.Where(i => i.Id == id);
+            var q = db.Users.Where(i => i.Id == id);
             if (q.Count() ==1)
             {
                 return q.Single();

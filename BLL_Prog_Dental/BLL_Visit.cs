@@ -1,9 +1,5 @@
-﻿using _ِDAL_Patient_Information;
-using System;
+﻿using DAL_Prog_Dental;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using BE_ProgDental;
 
 namespace BLL_Prog_Dental
@@ -11,7 +7,7 @@ namespace BLL_Prog_Dental
     public class BLL_Visit
     {
         DAL_Visit dal = new DAL_Visit();
-        public List<PatientInfo> ReadPatient()
+        public List<User> ReadPatient()
         {
             return dal.ReadPatient();
         }

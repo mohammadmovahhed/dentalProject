@@ -30,10 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Patient_information));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.textBoxX1 = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.textBoxX2 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.textBoxX3 = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.textBoxX4 = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -41,22 +40,6 @@
             this.حذفToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.textBoxX5 = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.dateTimePickerX1 = new BehComponents.DateTimePickerX();
-            this.comboBoxEx1 = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.comboItem1 = new DevComponents.Editors.ComboItem();
-            this.comboItem2 = new DevComponents.Editors.ComboItem();
-            this.comboItem3 = new DevComponents.Editors.ComboItem();
-            this.comboItem4 = new DevComponents.Editors.ComboItem();
-            this.comboItem5 = new DevComponents.Editors.ComboItem();
-            this.comboItem6 = new DevComponents.Editors.ComboItem();
-            this.comboItem7 = new DevComponents.Editors.ComboItem();
-            this.comboItem8 = new DevComponents.Editors.ComboItem();
-            this.comboItem9 = new DevComponents.Editors.ComboItem();
-            this.comboItem10 = new DevComponents.Editors.ComboItem();
-            this.comboItem11 = new DevComponents.Editors.ComboItem();
-            this.comboItem12 = new DevComponents.Editors.ComboItem();
-            this.comboItem13 = new DevComponents.Editors.ComboItem();
-            this.comboItem14 = new DevComponents.Editors.ComboItem();
-            this.comboItem25 = new DevComponents.Editors.ComboItem();
             this.textBoxX6 = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.textBoxX7 = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.comboBoxEx2 = new DevComponents.DotNetBar.Controls.ComboBoxEx();
@@ -87,7 +70,6 @@
             this.textBoxX8 = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.dataGridViewX1 = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX1)).BeginInit();
             this.SuspendLayout();
@@ -100,7 +82,7 @@
             this.textBoxX1.Border.Class = "TextBoxBorder";
             this.textBoxX1.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.textBoxX1.Font = new System.Drawing.Font("IRANSansWeb", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxX1.Location = new System.Drawing.Point(620, 100);
+            this.textBoxX1.Location = new System.Drawing.Point(619, 67);
             this.textBoxX1.MaxLength = 40;
             this.textBoxX1.Name = "textBoxX1";
             this.textBoxX1.PreventEnterBeep = true;
@@ -118,7 +100,7 @@
             this.textBoxX2.Border.Class = "TextBoxBorder";
             this.textBoxX2.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.textBoxX2.Font = new System.Drawing.Font("IRANSansWeb", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxX2.Location = new System.Drawing.Point(620, 138);
+            this.textBoxX2.Location = new System.Drawing.Point(619, 111);
             this.textBoxX2.MaxLength = 10;
             this.textBoxX2.Name = "textBoxX2";
             this.textBoxX2.PreventEnterBeep = true;
@@ -129,25 +111,6 @@
             this.textBoxX2.WatermarkText = "کد ملی";
             this.textBoxX2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxX2_KeyPress);
             // 
-            // textBoxX3
-            // 
-            // 
-            // 
-            // 
-            this.textBoxX3.Border.Class = "TextBoxBorder";
-            this.textBoxX3.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX3.Font = new System.Drawing.Font("IRANSansWeb", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxX3.Location = new System.Drawing.Point(620, 62);
-            this.textBoxX3.MaxLength = 30;
-            this.textBoxX3.Name = "textBoxX3";
-            this.textBoxX3.PreventEnterBeep = true;
-            this.textBoxX3.Size = new System.Drawing.Size(180, 30);
-            this.textBoxX3.TabIndex = 0;
-            this.textBoxX3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBoxX3.WatermarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
-            this.textBoxX3.WatermarkText = "شماره پرونده";
-            this.textBoxX3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxX3_KeyPress);
-            // 
             // textBoxX4
             // 
             // 
@@ -156,7 +119,7 @@
             this.textBoxX4.Border.Class = "TextBoxBorder";
             this.textBoxX4.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.textBoxX4.Font = new System.Drawing.Font("IRANSansWeb", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxX4.Location = new System.Drawing.Point(620, 176);
+            this.textBoxX4.Location = new System.Drawing.Point(619, 150);
             this.textBoxX4.MaxLength = 20;
             this.textBoxX4.Name = "textBoxX4";
             this.textBoxX4.PreventEnterBeep = true;
@@ -173,7 +136,7 @@
             this.guna2GradientButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2GradientButton1.CustomImages.Parent = this.guna2GradientButton1;
             this.guna2GradientButton1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
-            this.guna2GradientButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2GradientButton1.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2GradientButton1.ForeColor = System.Drawing.Color.White;
             this.guna2GradientButton1.HoverState.Parent = this.guna2GradientButton1;
             this.guna2GradientButton1.Location = new System.Drawing.Point(345, 195);
@@ -193,19 +156,19 @@
             this.حذفToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 88);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(124, 60);
             // 
             // ویرایشToolStripMenuItem
             // 
             this.ویرایشToolStripMenuItem.Name = "ویرایشToolStripMenuItem";
-            this.ویرایشToolStripMenuItem.Size = new System.Drawing.Size(210, 28);
+            this.ویرایشToolStripMenuItem.Size = new System.Drawing.Size(123, 28);
             this.ویرایشToolStripMenuItem.Text = "ویرایش";
             this.ویرایشToolStripMenuItem.Click += new System.EventHandler(this.ویرایشToolStripMenuItem_Click);
             // 
             // حذفToolStripMenuItem
             // 
             this.حذفToolStripMenuItem.Name = "حذفToolStripMenuItem";
-            this.حذفToolStripMenuItem.Size = new System.Drawing.Size(210, 28);
+            this.حذفToolStripMenuItem.Size = new System.Drawing.Size(123, 28);
             this.حذفToolStripMenuItem.Text = "حذف";
             this.حذفToolStripMenuItem.Click += new System.EventHandler(this.حذفToolStripMenuItem_Click);
             // 
@@ -293,7 +256,7 @@
             this.dateTimePickerX1.Font = new System.Drawing.Font("IRANSansWeb", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerX1.Format = BehComponents.DateTimePickerX.FormatDate.Long;
             this.dateTimePickerX1.Format4Binding = "yyyy/MM/dd";
-            this.dateTimePickerX1.Location = new System.Drawing.Point(103, 61);
+            this.dateTimePickerX1.Location = new System.Drawing.Point(103, 67);
             this.dateTimePickerX1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dateTimePickerX1.Name = "dateTimePickerX1";
             this.dateTimePickerX1.RightToLeftLayout = true;
@@ -303,146 +266,6 @@
             this.dateTimePickerX1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.dateTimePickerX1.TextWhenClearButtonClicked = "";
             // 
-            // comboBoxEx1
-            // 
-            this.comboBoxEx1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.comboBoxEx1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBoxEx1.DisplayMember = "Text";
-            this.comboBoxEx1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboBoxEx1.FocusHighlightColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(165)))));
-            this.comboBoxEx1.Font = new System.Drawing.Font("IRANSansWeb", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxEx1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.comboBoxEx1.FormattingEnabled = true;
-            this.comboBoxEx1.ItemHeight = 29;
-            this.comboBoxEx1.Items.AddRange(new object[] {
-            this.comboItem1,
-            this.comboItem2,
-            this.comboItem3,
-            this.comboItem4,
-            this.comboItem5,
-            this.comboItem6,
-            this.comboItem7,
-            this.comboItem8,
-            this.comboItem9,
-            this.comboItem10,
-            this.comboItem11,
-            this.comboItem12,
-            this.comboItem13,
-            this.comboItem14,
-            this.comboItem25});
-            this.comboBoxEx1.Location = new System.Drawing.Point(103, 105);
-            this.comboBoxEx1.Name = "comboBoxEx1";
-            this.comboBoxEx1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.comboBoxEx1.Size = new System.Drawing.Size(180, 35);
-            this.comboBoxEx1.Style = DevComponents.DotNetBar.eDotNetBarStyle.OfficeMobile2014;
-            this.comboBoxEx1.TabIndex = 8;
-            this.comboBoxEx1.Text = "علت مراجعه";
-            // 
-            // comboItem1
-            // 
-            this.comboItem1.ImagePosition = System.Windows.Forms.HorizontalAlignment.Center;
-            this.comboItem1.Text = "ویزیت بیمار";
-            this.comboItem1.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.comboItem1.TextLineAlignment = System.Drawing.StringAlignment.Center;
-            // 
-            // comboItem2
-            // 
-            this.comboItem2.ImagePosition = System.Windows.Forms.HorizontalAlignment.Center;
-            this.comboItem2.Text = "کشیدن دندان قدامی";
-            this.comboItem2.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.comboItem2.TextLineAlignment = System.Drawing.StringAlignment.Center;
-            // 
-            // comboItem3
-            // 
-            this.comboItem3.ImagePosition = System.Windows.Forms.HorizontalAlignment.Center;
-            this.comboItem3.Text = "کشیدن دندان خلفی";
-            this.comboItem3.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.comboItem3.TextLineAlignment = System.Drawing.StringAlignment.Center;
-            // 
-            // comboItem4
-            // 
-            this.comboItem4.ImagePosition = System.Windows.Forms.HorizontalAlignment.Center;
-            this.comboItem4.Text = "کشیدن دندان عقل";
-            this.comboItem4.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.comboItem4.TextLineAlignment = System.Drawing.StringAlignment.Center;
-            // 
-            // comboItem5
-            // 
-            this.comboItem5.ImagePosition = System.Windows.Forms.HorizontalAlignment.Center;
-            this.comboItem5.Text = "ترمیم دندان";
-            this.comboItem5.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.comboItem5.TextLineAlignment = System.Drawing.StringAlignment.Center;
-            // 
-            // comboItem6
-            // 
-            this.comboItem6.ImagePosition = System.Windows.Forms.HorizontalAlignment.Center;
-            this.comboItem6.Text = "پر کردن دندان";
-            this.comboItem6.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.comboItem6.TextLineAlignment = System.Drawing.StringAlignment.Center;
-            // 
-            // comboItem7
-            // 
-            this.comboItem7.ImagePosition = System.Windows.Forms.HorizontalAlignment.Center;
-            this.comboItem7.Text = "عصب کشی دندان";
-            this.comboItem7.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.comboItem7.TextLineAlignment = System.Drawing.StringAlignment.Center;
-            // 
-            // comboItem8
-            // 
-            this.comboItem8.ImagePosition = System.Windows.Forms.HorizontalAlignment.Center;
-            this.comboItem8.Text = "مشکل دندان عقل";
-            this.comboItem8.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.comboItem8.TextLineAlignment = System.Drawing.StringAlignment.Center;
-            // 
-            // comboItem9
-            // 
-            this.comboItem9.ImagePosition = System.Windows.Forms.HorizontalAlignment.Center;
-            this.comboItem9.Text = "جرم گیری بالای لثه";
-            this.comboItem9.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.comboItem9.TextLineAlignment = System.Drawing.StringAlignment.Center;
-            // 
-            // comboItem10
-            // 
-            this.comboItem10.ImagePosition = System.Windows.Forms.HorizontalAlignment.Center;
-            this.comboItem10.Text = "جرم گیری زیر لثه";
-            this.comboItem10.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.comboItem10.TextLineAlignment = System.Drawing.StringAlignment.Center;
-            // 
-            // comboItem11
-            // 
-            this.comboItem11.ImagePosition = System.Windows.Forms.HorizontalAlignment.Center;
-            this.comboItem11.Text = "بروساژ کردن هر فک";
-            this.comboItem11.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.comboItem11.TextLineAlignment = System.Drawing.StringAlignment.Center;
-            // 
-            // comboItem12
-            // 
-            this.comboItem12.ImagePosition = System.Windows.Forms.HorizontalAlignment.Center;
-            this.comboItem12.Text = "لمینت";
-            this.comboItem12.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.comboItem12.TextLineAlignment = System.Drawing.StringAlignment.Center;
-            // 
-            // comboItem13
-            // 
-            this.comboItem13.ImagePosition = System.Windows.Forms.HorizontalAlignment.Center;
-            this.comboItem13.Text = "کامپوزیت";
-            this.comboItem13.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.comboItem13.TextLineAlignment = System.Drawing.StringAlignment.Center;
-            // 
-            // comboItem14
-            // 
-            this.comboItem14.ImagePosition = System.Windows.Forms.HorizontalAlignment.Center;
-            this.comboItem14.Text = "رادیوگرافی تک دندان";
-            this.comboItem14.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.comboItem14.TextLineAlignment = System.Drawing.StringAlignment.Center;
-            // 
-            // comboItem25
-            // 
-            this.comboItem25.ImagePosition = System.Windows.Forms.HorizontalAlignment.Center;
-            this.comboItem25.Text = "سایر موارد";
-            this.comboItem25.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.comboItem25.TextLineAlignment = System.Drawing.StringAlignment.Center;
-            // 
             // textBoxX6
             // 
             // 
@@ -451,7 +274,7 @@
             this.textBoxX6.Border.Class = "TextBoxBorder";
             this.textBoxX6.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.textBoxX6.Font = new System.Drawing.Font("IRANSansWeb", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxX6.Location = new System.Drawing.Point(356, 106);
+            this.textBoxX6.Location = new System.Drawing.Point(356, 112);
             this.textBoxX6.MaxLength = 30;
             this.textBoxX6.Name = "textBoxX6";
             this.textBoxX6.PreventEnterBeep = true;
@@ -469,7 +292,7 @@
             this.textBoxX7.Border.Class = "TextBoxBorder";
             this.textBoxX7.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.textBoxX7.Font = new System.Drawing.Font("IRANSansWeb", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxX7.Location = new System.Drawing.Point(356, 62);
+            this.textBoxX7.Location = new System.Drawing.Point(356, 68);
             this.textBoxX7.MaxLength = 11;
             this.textBoxX7.Name = "textBoxX7";
             this.textBoxX7.PreventEnterBeep = true;
@@ -501,7 +324,7 @@
             this.comboItem20,
             this.comboItem21,
             this.comboItem22});
-            this.comboBoxEx2.Location = new System.Drawing.Point(103, 147);
+            this.comboBoxEx2.Location = new System.Drawing.Point(103, 112);
             this.comboBoxEx2.Name = "comboBoxEx2";
             this.comboBoxEx2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.comboBoxEx2.Size = new System.Drawing.Size(180, 35);
@@ -580,7 +403,7 @@
             this.comboItem41,
             this.comboItem42,
             this.comboItem23});
-            this.comboBoxEx3.Location = new System.Drawing.Point(103, 186);
+            this.comboBoxEx3.Location = new System.Drawing.Point(103, 153);
             this.comboBoxEx3.Name = "comboBoxEx3";
             this.comboBoxEx3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.comboBoxEx3.Size = new System.Drawing.Size(180, 35);
@@ -666,7 +489,7 @@
             this.textBoxX8.Border.Class = "TextBoxBorder";
             this.textBoxX8.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.textBoxX8.Font = new System.Drawing.Font("IRANSansWeb", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxX8.Location = new System.Drawing.Point(356, 144);
+            this.textBoxX8.Location = new System.Drawing.Point(356, 150);
             this.textBoxX8.MaxLength = 30;
             this.textBoxX8.Name = "textBoxX8";
             this.textBoxX8.PreventEnterBeep = true;
@@ -682,14 +505,14 @@
             this.dataGridViewX1.AllowUserToDeleteRows = false;
             this.dataGridViewX1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewX1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewX1.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewX1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewX1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dataGridViewX1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dataGridViewX1.Location = new System.Drawing.Point(0, 300);
@@ -714,23 +537,11 @@
             this.label1.TabIndex = 15;
             this.label1.Text = "فرم تشکیل پرونده بیماران";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("IRANSansWeb", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(54)))), ((int)(((byte)(44)))));
-            this.label2.Location = new System.Drawing.Point(800, 63);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 24);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "شماره پرونده";
-            // 
             // Patient_information
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridViewX1);
             this.Controls.Add(this.textBoxX8);
@@ -738,14 +549,12 @@
             this.Controls.Add(this.comboBoxEx2);
             this.Controls.Add(this.textBoxX7);
             this.Controls.Add(this.textBoxX6);
-            this.Controls.Add(this.comboBoxEx1);
             this.Controls.Add(this.dateTimePickerX1);
             this.Controls.Add(this.textBoxX5);
             this.Controls.Add(this.guna2GradientButton1);
             this.Controls.Add(this.textBoxX4);
             this.Controls.Add(this.textBoxX2);
             this.Controls.Add(this.textBoxX1);
-            this.Controls.Add(this.textBoxX3);
             this.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "Patient_information";
             this.Size = new System.Drawing.Size(890, 594);
@@ -761,7 +570,6 @@
 
         private DevComponents.DotNetBar.Controls.TextBoxX textBoxX1;
         private DevComponents.DotNetBar.Controls.TextBoxX textBoxX2;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX3;
         private DevComponents.DotNetBar.Controls.TextBoxX textBoxX4;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
@@ -769,7 +577,6 @@
         private System.Windows.Forms.ToolStripMenuItem حذفToolStripMenuItem;
         private DevComponents.DotNetBar.Controls.TextBoxX textBoxX5;
         private BehComponents.DateTimePickerX dateTimePickerX1;
-        private DevComponents.DotNetBar.Controls.ComboBoxEx comboBoxEx1;
         private DevComponents.DotNetBar.Controls.TextBoxX textBoxX6;
         private DevComponents.DotNetBar.Controls.TextBoxX textBoxX7;
         private DevComponents.DotNetBar.Controls.ComboBoxEx comboBoxEx2;
@@ -800,21 +607,5 @@
         private DevComponents.Editors.ComboItem comboItem24;
         private DevComponents.DotNetBar.Controls.DataGridViewX dataGridViewX1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private DevComponents.Editors.ComboItem comboItem1;
-        private DevComponents.Editors.ComboItem comboItem2;
-        private DevComponents.Editors.ComboItem comboItem3;
-        private DevComponents.Editors.ComboItem comboItem4;
-        private DevComponents.Editors.ComboItem comboItem5;
-        private DevComponents.Editors.ComboItem comboItem6;
-        private DevComponents.Editors.ComboItem comboItem7;
-        private DevComponents.Editors.ComboItem comboItem8;
-        private DevComponents.Editors.ComboItem comboItem9;
-        private DevComponents.Editors.ComboItem comboItem10;
-        private DevComponents.Editors.ComboItem comboItem11;
-        private DevComponents.Editors.ComboItem comboItem12;
-        private DevComponents.Editors.ComboItem comboItem13;
-        private DevComponents.Editors.ComboItem comboItem14;
-        private DevComponents.Editors.ComboItem comboItem25;
     }
 }

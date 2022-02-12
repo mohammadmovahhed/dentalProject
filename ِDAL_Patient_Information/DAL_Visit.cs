@@ -1,19 +1,15 @@
-﻿using _DAL_Patient_Information;
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using BE_ProgDental;
 
-namespace _ِDAL_Patient_Information
-{ 
-     public class DAL_Visit
+namespace DAL_Prog_Dental
+{
+    public class DAL_Visit
     {
         DB_Support dbs = new DB_Support();
-        public List<PatientInfo> ReadPatient()
+        public List<User> ReadPatient()
         {
-            return dbs.PatientInfos.ToList();
+            return dbs.Users.ToList();
         }
 
         public List<Doctor> ReadDoctor()

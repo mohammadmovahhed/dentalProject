@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL_Prog_Dental;
 using BE_ProgDental;
@@ -19,7 +12,7 @@ namespace prog_dental
             InitializeComponent();
         }
 
-        BLL_Patient_Information BLL = new BLL_Patient_Information();
+        BLL_User BLL = new BLL_User();
         int id;
         bool flag = true;
 
@@ -28,14 +21,12 @@ namespace prog_dental
             //بروزرسانی دیتاگرید
             dataGridViewX1.DataSource = null;
             dataGridViewX1.DataSource = BLL.Read();
-            dataGridViewX1.Columns["NParvandeh"].HeaderText = "شماره پرونده";
             dataGridViewX1.Columns["Name"].HeaderText = "نام و نام خانوادگی";
-            dataGridViewX1.Columns["HCode"].HeaderText = "کدملی";
+            dataGridViewX1.Columns["CodeMelli"].HeaderText = "کدملی";
             dataGridViewX1.Columns["PhoneNumber"].HeaderText = "تلفن";
             dataGridViewX1.Columns["GroupBload"].HeaderText = "گروه خونی";
             dataGridViewX1.Columns["TimeEnter"].HeaderText = "تاریخ مراجعه اولیه";
             dataGridViewX1.Columns["FatherName"].HeaderText = "نام پدر";
-            dataGridViewX1.Columns["PatientProblem"].HeaderText = "دلیل مراجعه اولیه";
             dataGridViewX1.Columns["Moaref"].HeaderText = "معرف";
             dataGridViewX1.Columns["Jop"].HeaderText = "شغل";
             dataGridViewX1.Columns["Tahsilat"].HeaderText = "تحصیلات";
@@ -54,30 +45,28 @@ namespace prog_dental
             }
         }
 
-        void NumberParvandeh()
-        {
-            //نمایش اخرین شماره پرونده بیمار 
-            int new_NParvandeh = 0;
-            foreach (var item in BLL.Read())
-            {
-                new_NParvandeh = Convert.ToInt32(item.NParvandeh);
-            }
-            new_NParvandeh += 1;
-            label2.Text = new_NParvandeh.ToString();
-        }
+        //void NumberParvandeh()
+        //{
+        //    //نمایش اخرین شماره پرونده بیمار 
+        //    int new_NParvandeh = 0;
+        //    foreach (var item in BLL.Read())
+        //    {
+        //        new_NParvandeh = Convert.ToInt32(item.NParvandeh);
+        //    }
+        //    new_NParvandeh += 1;
+        //    label2.Text = new_NParvandeh.ToString();
+        //}
 
 
         private void Guna2GradientButton1_Click(object sender, EventArgs e)
         {
 
-            PatientInfo BE = new PatientInfo
+            User BE = new User
             {
-                NParvandeh = textBoxX3.Text,
                 Name = textBoxX1.Text,
-                HCode = textBoxX2.Text,
+                CodeMelli = textBoxX2.Text,
                 TimeEnter = dateTimePickerX1.Text,
                 FatherName = textBoxX4.Text,
-                PatientProblem = comboBoxEx1.Text,
                 PhoneNumber = textBoxX7.Text,
                 Moaref = textBoxX6.Text,
                 Jop = textBoxX8.Text,
@@ -100,19 +89,16 @@ namespace prog_dental
 
             SetDataGrid();
             Clear();
-            NumberParvandeh();
         }
 
 
         private void ویرایشToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            PatientInfo BE = BLL.Read(id);
+            User BE = BLL.Read(id);
             textBoxX1.Text = BE.Name;
-            textBoxX2.Text = BE.HCode.ToString();
+            textBoxX2.Text = BE.CodeMelli;
             dateTimePickerX1.Text = BE.TimeEnter;
             textBoxX4.Text = BE.FatherName;
-            comboBoxEx1.Text = BE.PatientProblem;
-            textBoxX3.Text = BE.NParvandeh;
             textBoxX7.Text = BE.PhoneNumber;
             textBoxX6.Text = BE.Moaref;
             textBoxX8.Text = BE.Jop;
@@ -128,28 +114,23 @@ namespace prog_dental
         {
             BLL.Delete(id);
             SetDataGrid();
-            NumberParvandeh();
         }
 
         private void Patient_information_Load(object sender, EventArgs e)
         {
-            //ProblemNames();
             SetDataGrid();
-            NumberParvandeh();
         }
 
         private void TextBoxX5_TextChanged(object sender, EventArgs e)
         {
             dataGridViewX1.DataSource = null;
             dataGridViewX1.DataSource = BLL.Read(textBoxX5.Text);
-            dataGridViewX1.Columns["NParvandeh"].HeaderText = "شماره پرونده";
             dataGridViewX1.Columns["Name"].HeaderText = "نام و نام خانوادگی";
             dataGridViewX1.Columns["HCode"].HeaderText = "کدملی";
             dataGridViewX1.Columns["PhoneNumber"].HeaderText = "تلفن";
             dataGridViewX1.Columns["GroupBload"].HeaderText = "گروه خونی";
             dataGridViewX1.Columns["TimeEnter"].HeaderText = "تاریخ مراجعه اولیه";
             dataGridViewX1.Columns["FatherName"].HeaderText = "نام پدر";
-            dataGridViewX1.Columns["PatientProblem"].HeaderText = "دلیل مراجعه اولیه";
             dataGridViewX1.Columns["Moaref"].HeaderText = "معرف";
             dataGridViewX1.Columns["Jop"].HeaderText = "شغل";
             dataGridViewX1.Columns["Tahsilat"].HeaderText = "تحصیلات";

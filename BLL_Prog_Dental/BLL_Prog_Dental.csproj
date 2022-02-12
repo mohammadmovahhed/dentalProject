@@ -43,7 +43,7 @@
   <ItemGroup>
     <Compile Include="BLL_Doctor.cs" />
     <Compile Include="BLL_Login.cs" />
-    <Compile Include="BLL_Patient_Information.cs" />
+    <Compile Include="BLL_User.cs" />
     <Compile Include="BLL_Report.cs" />
     <Compile Include="BLL_Visit.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

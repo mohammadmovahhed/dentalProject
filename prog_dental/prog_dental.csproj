@@ -95,11 +95,11 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Patient information.cs">
+    <Compile Include="UIUser.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Patient information.Designer.cs">
-      <DependentUpon>Patient information.cs</DependentUpon>
+    <Compile Include="UIUser.Designer.cs">
+      <DependentUpon>UIUser.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -144,8 +144,8 @@
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Patient information.resx">
-      <DependentUpon>Patient information.cs</DependentUpon>
+    <EmbeddedResource Include="UIUser.resx">
+      <DependentUpon>UIUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

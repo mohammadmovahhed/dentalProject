@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BE_ProgDental
+﻿namespace BE_ProgDental
 {
-   public class Doctor
+    public class Doctor
     {
         public int Id { get; set; }
         public string Name { get; set; }

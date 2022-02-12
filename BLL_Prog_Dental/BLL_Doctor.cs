@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using DAL_Prog_Dental;
-using _ِDAL_Patient_Information;
 using BE_ProgDental;
 
 namespace BLL_Prog_Dental

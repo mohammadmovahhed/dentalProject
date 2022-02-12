@@ -1,17 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data.Entity;
+﻿using System.Data.Entity;
 using BE_ProgDental;
 
-namespace _DAL_Patient_Information
+namespace DAL_Prog_Dental
 {
     public class DB_Support : DbContext
     {
         public DB_Support() : base("name=constr1") { }
-        public DbSet<PatientInfo> PatientInfos { get; set; }
+        public DbSet<User> Users { get; set; }
         public DbSet<Doctor> Doctors { get; set; }
         public DbSet<Visit> Visits { get; set; }
         public DbSet<Insurance> Insurances { get; set; }

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using _ِDAL_Patient_Information;
+﻿using System.Collections.Generic;
 using DAL_Prog_Dental;
 using BE_ProgDental;
 
@@ -13,13 +8,13 @@ namespace BLL_Prog_Dental
     {
         Dal_Report dbr = new Dal_Report();
 
-        public List<PatientInfo> Read(string patientss)
+        public List<User> Read(string patientss)
         {
             return dbr.Read(patientss);
         }
 
 
-        public PatientInfo Read(int id)
+        public User Read(int id)
         {
             return dbr.Read(id);
         }
