@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UIVisit));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.textBoxX2 = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
@@ -84,7 +84,7 @@
             this.textBoxX2.Name = "textBoxX2";
             this.textBoxX2.PreventEnterBeep = true;
             this.textBoxX2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textBoxX2.Size = new System.Drawing.Size(290, 34);
+            this.textBoxX2.Size = new System.Drawing.Size(290, 30);
             this.textBoxX2.TabIndex = 5;
             this.textBoxX2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBoxX2.WatermarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
@@ -299,7 +299,6 @@
             this.comboBoxEx1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBoxEx1.DisplayMember = "Text";
             this.comboBoxEx1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboBoxEx1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBoxEx1.Font = new System.Drawing.Font("IRANSansWeb", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxEx1.FormattingEnabled = true;
             this.comboBoxEx1.ItemHeight = 29;
@@ -317,7 +316,6 @@
             this.comboBoxEx2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBoxEx2.DisplayMember = "Text";
             this.comboBoxEx2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboBoxEx2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBoxEx2.Font = new System.Drawing.Font("IRANSansWeb", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxEx2.FormattingEnabled = true;
             this.comboBoxEx2.ItemHeight = 29;
@@ -455,7 +453,6 @@
             this.comboBoxEx3.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBoxEx3.DisplayMember = "Text";
             this.comboBoxEx3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboBoxEx3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBoxEx3.Font = new System.Drawing.Font("IRANSansWeb", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxEx3.FormattingEnabled = true;
             this.comboBoxEx3.ItemHeight = 29;
@@ -473,7 +470,6 @@
             this.comboBoxEx4.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBoxEx4.DisplayMember = "Text";
             this.comboBoxEx4.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboBoxEx4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBoxEx4.Font = new System.Drawing.Font("IRANSansWeb", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxEx4.FormattingEnabled = true;
             this.comboBoxEx4.ItemHeight = 29;
@@ -492,7 +488,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(54)))), ((int)(((byte)(44)))));
             this.label1.Location = new System.Drawing.Point(316, -1);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(233, 60);
+            this.label1.Size = new System.Drawing.Size(195, 49);
             this.label1.TabIndex = 23;
             this.label1.Text = "فرم نوبت دهی";
             // 
@@ -503,14 +499,14 @@
             this.dataGridViewX1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewX1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewX1.ContextMenuStrip = this.contextMenuStrip1;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 7.8F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewX1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 7.8F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewX1.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewX1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dataGridViewX1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dataGridViewX1.Location = new System.Drawing.Point(0, 261);
@@ -532,19 +528,19 @@
             this.ویرایشToolStripMenuItem,
             this.حذفToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(135, 72);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(124, 60);
             // 
             // ویرایشToolStripMenuItem
             // 
             this.ویرایشToolStripMenuItem.Name = "ویرایشToolStripMenuItem";
-            this.ویرایشToolStripMenuItem.Size = new System.Drawing.Size(134, 34);
+            this.ویرایشToolStripMenuItem.Size = new System.Drawing.Size(123, 28);
             this.ویرایشToolStripMenuItem.Text = "ویرایش";
             this.ویرایشToolStripMenuItem.Click += new System.EventHandler(this.ویرایشToolStripMenuItem_Click);
             // 
             // حذفToolStripMenuItem
             // 
             this.حذفToolStripMenuItem.Name = "حذفToolStripMenuItem";
-            this.حذفToolStripMenuItem.Size = new System.Drawing.Size(134, 34);
+            this.حذفToolStripMenuItem.Size = new System.Drawing.Size(123, 28);
             this.حذفToolStripMenuItem.Text = "حذف";
             this.حذفToolStripMenuItem.Click += new System.EventHandler(this.حذفToolStripMenuItem_Click);
             // 
@@ -562,7 +558,7 @@
             this.textBoxX1.Name = "textBoxX1";
             this.textBoxX1.PreventEnterBeep = true;
             this.textBoxX1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textBoxX1.Size = new System.Drawing.Size(332, 34);
+            this.textBoxX1.Size = new System.Drawing.Size(332, 30);
             this.textBoxX1.TabIndex = 25;
             this.textBoxX1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBoxX1.WatermarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
@@ -572,7 +568,7 @@
             // 
             // UIVisit
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.textBoxX1);

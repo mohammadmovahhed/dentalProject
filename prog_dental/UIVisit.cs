@@ -46,7 +46,7 @@ namespace prog_dental
                 {
                     d = Convert.ToInt32(item.Darsad);
                 }
-            }   
+            }
         }
 
         int VisitA;
@@ -61,7 +61,7 @@ namespace prog_dental
         {
             foreach (var item in Controls)
             {
-                if (item.GetType().ToString() == "DevComponents.DotNetBar.Controls.ComboBoxEx") 
+                if (item.GetType().ToString() == "DevComponents.DotNetBar.Controls.ComboBoxEx")
                 {
                     (item as ComboBoxEx).Text = "";
                 }
@@ -71,35 +71,43 @@ namespace prog_dental
         BLL_Visit bll = new BLL_Visit();
         private void Guna2GradientButton1_Click(object sender, EventArgs e)
         {
-            var b = this.Controls.OfType<ComboBoxEx>().Any(i => i.Text == "");
-            if (b) 
+            //var b = this.Controls.OfType<ComboBoxEx>().Any(i => i.Text == "");
+            //if (b || textBoxX2.Text == "")
+            //{
+            //    MessageBox.Show("لطفا ابتدا تمام اطلاعات را تکمیل کنید");
+            //}
+            //else
+            //{
+
+            //فقط برای تست است و بعدا پاک میشود
+            var Quser = from i in bll.ReadPatient() where comboBoxEx1.SelectedItem == i select i;
+            if (Quser.Count() !=null)
             {
-                MessageBox.Show("لطفا ابتدا تمام اطلاعات را تکمیل کنید");
+                MessageBox.Show("aokdj");
             }
-            else
-            {
-                Visit visitNew = new Visit
-                {
-                    NameBimar = comboBoxEx1.Text,
-                    MoshkelBimar = comboBoxEx2.Text,
-                    Bimeh = comboBoxEx3.Text,
-                    DoctorName = comboBoxEx4.Text,
-                    ZamanVisit = dateTimePickerX1.Text,
-                    HazineKol = Convert.ToString(textBoxX2.Text),
-                    HazineVisit = Convert.ToString(labelX8.Text)
-                };
-                if (flag) 
-                {
-                    MessageBox.Show(bll.Create(visitNew));
-                }
-                else if(!flag){
-                    flag = true;
-                    guna2GradientButton1.Text = "تشکیل پرونده";
-                    MessageBox.Show(bll.Update(id, visitNew));
-                }
-                DGV();
-                Clear();
-            }
+            //Visit visitNew = new Visit
+            //{
+            //    User_ID = Quser.First().Name,
+            //    MoshkelBimar = comboBoxEx2.Text,
+            //    Bimeh = comboBoxEx3.Text,
+            //    DoctorName = comboBoxEx4.Text,
+            //    ZamanVisit = dateTimePickerX1.Text,
+            //    HazineKol = Convert.ToString(textBoxX2.Text),
+            //    HazineVisit = Convert.ToString(labelX8.Text)
+            //};
+            //if (flag)
+            //{
+            //    MessageBox.Show(bll.Create(visitNew));
+            //}
+            //else if (!flag)
+            //{
+            //    flag = true;
+            //    guna2GradientButton1.Text = "تشکیل پرونده";
+            //    MessageBox.Show(bll.Update(id, visitNew));
+            //}
+            //DGV();
+            //Clear();
+            //}
         }
 
         private void UIVisit_Load(object sender, EventArgs e)
@@ -109,7 +117,7 @@ namespace prog_dental
 
         private void ComboBoxEx1_DropDown(object sender, EventArgs e)
         {
-            if(comboBoxEx1.Items.Count == 0)
+            if (comboBoxEx1.Items.Count == 0)
             {
                 var q = from i in bll.ReadPatient() select i;
                 comboBoxEx1.DataSource = q.ToList();
@@ -129,7 +137,7 @@ namespace prog_dental
 
         private void ComboBoxEx3_DropDown(object sender, EventArgs e)
         {
-            if(comboBoxEx3.Items.Count == 0)
+            if (comboBoxEx3.Items.Count == 0)
             {
                 var q = from i in bll.ReadInsurances() select i;
                 comboBoxEx3.DataSource = q.ToList();
@@ -141,7 +149,7 @@ namespace prog_dental
         private void TextBoxX2_TextChanged(object sender, EventArgs e)
         {
             Darsad();
-            
+
             if (d > 0)
             {
                 if (textBoxX2.Text.Length > 0)
@@ -152,7 +160,7 @@ namespace prog_dental
 
                 MohasebeDarsad();
             }
-            else 
+            else
             {
                 labelX8.Text = textBoxX2.Text;
             }

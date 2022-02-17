@@ -64,7 +64,7 @@ namespace prog_dental
             User BE = new User
             {
                 Name = textBoxX1.Text,
-                CodeMelli = textBoxX2.Text,
+                CodeMelli = int.Parse(textBoxX2.Text),
                 TimeEnter = dateTimePickerX1.Text,
                 FatherName = textBoxX4.Text,
                 PhoneNumber = textBoxX7.Text,
@@ -96,7 +96,7 @@ namespace prog_dental
         {
             User BE = BLL.Read(id);
             textBoxX1.Text = BE.Name;
-            textBoxX2.Text = BE.CodeMelli;
+            textBoxX2.Text = BE.CodeMelli.ToString();
             dateTimePickerX1.Text = BE.TimeEnter;
             textBoxX4.Text = BE.FatherName;
             textBoxX7.Text = BE.PhoneNumber;
