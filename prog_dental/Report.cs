@@ -28,18 +28,15 @@ namespace prog_dental
             dataGridViewX2.DataSource = null;
             dataGridViewX1.DataSource = null;
             dataGridViewX1.DataSource = blr.Read(textBoxX5.Text);
-            dataGridViewX1.Columns["NParvandeh"].HeaderText = "شماره پرونده";
             dataGridViewX1.Columns["Name"].HeaderText = "نام و نام خانوادگی";
-            dataGridViewX1.Columns["HCode"].HeaderText = "کدملی";
+            dataGridViewX1.Columns["CodeMelli_Id"].HeaderText = "کدملی";
             dataGridViewX1.Columns["PhoneNumber"].HeaderText = "تلفن";
             dataGridViewX1.Columns["GroupBload"].HeaderText = "گروه خونی";
             dataGridViewX1.Columns["TimeEnter"].HeaderText = "تاریخ مراجعه اولیه";
             dataGridViewX1.Columns["FatherName"].HeaderText = "نام پدر";
-            dataGridViewX1.Columns["PatientProblem"].HeaderText = "دلیل مراجعه اولیه";
             dataGridViewX1.Columns["Moaref"].HeaderText = "معرف";
             dataGridViewX1.Columns["Jop"].HeaderText = "شغل";
             dataGridViewX1.Columns["Tahsilat"].HeaderText = "تحصیلات";
-            dataGridViewX1.Columns["Id"].HeaderText = "ردیف";
         }
 
         private void DataGridViewX1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -60,7 +57,7 @@ namespace prog_dental
         {
             User pi = blr.Read(id);
             labelX13.Text = pi.Name;
-            labelX14.Text = pi.CodeMelli;
+            labelX14.Text = pi.CodeMelli_Id.ToString();
             labelX19.Text = pi.TimeEnter;
             labelX15.Text = pi.FatherName;
             labelX16.Text = pi.PhoneNumber;
@@ -85,9 +82,8 @@ namespace prog_dental
 
         private void Guna2GradientButton1_Click(object sender, EventArgs e)
         {
-            stiReport2.Dictionary.Variables["NParvandeh"].Value = labelX12.Text;
             stiReport2.Dictionary.Variables["Name"].Value = labelX13.Text;
-            stiReport2.Dictionary.Variables["HCode"].Value = labelX14.Text;
+            stiReport2.Dictionary.Variables["CodeMelli_Id"].Value = labelX14.Text;
             stiReport2.Dictionary.Variables["FatherName"].Value = labelX15.Text;
             stiReport2.Dictionary.Variables["PhoneNumber"].Value = labelX16.Text;
             stiReport2.Dictionary.Variables["Moaref"].Value = labelX17.Text;
@@ -95,7 +91,6 @@ namespace prog_dental
             stiReport2.Dictionary.Variables["GroupBload"].Value = labelX21.Text;
             stiReport2.Dictionary.Variables["Tahsilat"].Value = labelX22.Text;
             stiReport2.Dictionary.Variables["TimeEnter"].Value = labelX19.Text;
-            stiReport2.Dictionary.Variables["PatientProblem"].Value = labelX20.Text;
 
             stiReport2.RegBusinessObject("PatientVisitReport", dataGridViewX1.DataSource);
 
@@ -125,14 +120,13 @@ namespace prog_dental
             dataGridViewX2.DataSource = null;
             dataGridViewX2.DataSource = blr.Readdoc(textBoxX1.Text);
             dataGridViewX2.Columns["Name"].HeaderText = "نام و نام خانوادگی";
-            dataGridViewX2.Columns["NezamPezeshki"].HeaderText = "کدنظام پزشکی";
+            dataGridViewX2.Columns["NezamPezeshki_Id"].HeaderText = "کدنظام پزشکی";
             dataGridViewX2.Columns["Takhasos"].HeaderText = "تخصص";
             dataGridViewX2.Columns["Phone"].HeaderText = "تلفن تماس";
             dataGridViewX2.Columns["Univercity"].HeaderText = "دانشگاه";
             dataGridViewX2.Columns["Age"].HeaderText = "تعداد سال خدمت";
             dataGridViewX2.Columns["Darsad"].HeaderText = "درصد دریافتی";
             dataGridViewX2.Columns["Address"].HeaderText = "آدرس";
-            dataGridViewX2.Columns["Id"].HeaderText = "ردیف";
             dataGridViewX2.Columns["PictureAddress"].HeaderText = "محل ذخیره تصویر";
         }
 
@@ -140,7 +134,7 @@ namespace prog_dental
         {
             Doctor doc = blr.Readdoc(di);
             labelX31.Text = doc.Name;
-            labelX30.Text = doc.NezamPezeshki;
+            labelX30.Text = doc.NezamPezeshki_Id.ToString();
             labelX29.Text = doc.Takhasos;
             labelX26.Text = doc.Age.ToString();
             labelX25.Text = doc.Phone;
@@ -165,7 +159,7 @@ namespace prog_dental
 
         private void Guna2GradientButton2_Click(object sender, EventArgs e)
         {
-            stiReport3.Dictionary.Variables["NezamPezeshki"].Value = labelX30.Text;
+            stiReport3.Dictionary.Variables["NezamPezeshki_Id"].Value = labelX30.Text;
             stiReport3.Dictionary.Variables["Name"].Value = labelX31.Text;
             stiReport3.Dictionary.Variables["Takhasos"].Value = labelX29.Text;
             stiReport3.Dictionary.Variables["Univercity"].Value = labelX27.Text;

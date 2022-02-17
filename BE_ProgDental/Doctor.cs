@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace BE_ProgDental
 {
@@ -8,7 +9,8 @@ namespace BE_ProgDental
         {
             this.Visits = new HashSet<Visit>();
         }
-        public int NezamPezeshki { get; set; }
+        [Key]
+        public int NezamPezeshki_Id { get; set; }
         public string Name { get; set; }
         public string Takhasos { get; set; }
         public string Univercity { get; set; }

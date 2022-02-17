@@ -39,14 +39,13 @@ namespace prog_dental
             dataGridViewX1.DataSource = null;
             dataGridViewX1.DataSource = bll.Read();
             dataGridViewX1.Columns["Name"].HeaderText = "نام و نام خانوادگی";
-            dataGridViewX1.Columns["NezamPezeshki"].HeaderText = "کدنظام پزشکی";
+            dataGridViewX1.Columns["NezamPezeshki_Id"].HeaderText = "کدنظام پزشکی";
             dataGridViewX1.Columns["Takhasos"].HeaderText = "تخصص";
             dataGridViewX1.Columns["Phone"].HeaderText = "تلفن تماس";
             dataGridViewX1.Columns["Univercity"].HeaderText = "دانشگاه";
             dataGridViewX1.Columns["Age"].HeaderText = "تعداد سال های خدمت";
             dataGridViewX1.Columns["Darsad"].HeaderText = "درصد دریافتی";
             dataGridViewX1.Columns["Address"].HeaderText = "آدرس";
-            dataGridViewX1.Columns["Id"].HeaderText = "ردیف";
             dataGridViewX1.Columns["PictureAddress"].HeaderText = "محل ذخیره تصویر";
         }
 
@@ -91,7 +90,7 @@ namespace prog_dental
                 Doctor doc = new Doctor
                 {
                     Name = textBoxX1.Text,
-                    NezamPezeshki = textBoxX2.Text,
+                    NezamPezeshki_Id = int.Parse(textBoxX2.Text),
                     Takhasos = textBoxX3.Text,
                     Univercity = textBoxX4.Text,
                     Age = Convert.ToByte(textBoxX5.Text),
@@ -124,7 +123,7 @@ namespace prog_dental
 
             Doctor doctor = bll.Read(id);
             labelX1.Text = doctor.Name;
-            labelX2.Text = doctor.NezamPezeshki;
+            labelX2.Text = doctor.NezamPezeshki_Id.ToString();
             labelX1.Visible = true;
             labelX2.Visible = true;
 
@@ -156,7 +155,7 @@ namespace prog_dental
         {
             Doctor doc = bll.Read(id);
             textBoxX1.Text = doc.Name;
-            textBoxX2.Text = doc.NezamPezeshki;
+            textBoxX2.Text = doc.NezamPezeshki_Id.ToString();
             textBoxX3.Text = doc.Takhasos;
             textBoxX4.Text = doc.Univercity;
             textBoxX5.Text = Convert.ToString(doc.Age);
@@ -183,14 +182,13 @@ namespace prog_dental
             dataGridViewX1.DataSource = null;
             dataGridViewX1.DataSource = bll.Read(textBoxX8.Text);
             dataGridViewX1.Columns["Name"].HeaderText = "نام و نام خانوادگی";
-            dataGridViewX1.Columns["NezamPezeshki"].HeaderText = "کدنظام پزشکی";
+            dataGridViewX1.Columns["NezamPezeshki_Id"].HeaderText = "کدنظام پزشکی";
             dataGridViewX1.Columns["Takhasos"].HeaderText = "تخصص";
             dataGridViewX1.Columns["Phone"].HeaderText = "تلفن تماس";
             dataGridViewX1.Columns["Univercity"].HeaderText = "دانشگاه";
             dataGridViewX1.Columns["Age"].HeaderText = "تعداد سال های خدمت";
             dataGridViewX1.Columns["Darsad"].HeaderText = "درصد دریافتی";
             dataGridViewX1.Columns["Address"].HeaderText = "آدرس";
-            dataGridViewX1.Columns["Id"].HeaderText = "ردیف";
             dataGridViewX1.Columns["PictureAddress"].HeaderText = "محل ذخیره تصویر";
 
 

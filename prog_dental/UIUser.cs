@@ -22,7 +22,7 @@ namespace prog_dental
             dataGridViewX1.DataSource = null;
             dataGridViewX1.DataSource = BLL.Read();
             dataGridViewX1.Columns["Name"].HeaderText = "نام و نام خانوادگی";
-            dataGridViewX1.Columns["CodeMelli"].HeaderText = "کدملی";
+            dataGridViewX1.Columns["CodeMelli_Id"].HeaderText = "کدملی";
             dataGridViewX1.Columns["PhoneNumber"].HeaderText = "تلفن";
             dataGridViewX1.Columns["GroupBload"].HeaderText = "گروه خونی";
             dataGridViewX1.Columns["TimeEnter"].HeaderText = "تاریخ مراجعه اولیه";
@@ -30,7 +30,6 @@ namespace prog_dental
             dataGridViewX1.Columns["Moaref"].HeaderText = "معرف";
             dataGridViewX1.Columns["Jop"].HeaderText = "شغل";
             dataGridViewX1.Columns["Tahsilat"].HeaderText = "تحصیلات";
-            dataGridViewX1.Columns["Id"].HeaderText = "ردیف";
         }
 
         void Clear()
@@ -64,7 +63,7 @@ namespace prog_dental
             User BE = new User
             {
                 Name = textBoxX1.Text,
-                CodeMelli = int.Parse(textBoxX2.Text),
+                CodeMelli_Id = int.Parse(textBoxX2.Text),
                 TimeEnter = dateTimePickerX1.Text,
                 FatherName = textBoxX4.Text,
                 PhoneNumber = textBoxX7.Text,
@@ -96,7 +95,7 @@ namespace prog_dental
         {
             User BE = BLL.Read(id);
             textBoxX1.Text = BE.Name;
-            textBoxX2.Text = BE.CodeMelli.ToString();
+            textBoxX2.Text = BE.CodeMelli_Id.ToString();
             dateTimePickerX1.Text = BE.TimeEnter;
             textBoxX4.Text = BE.FatherName;
             textBoxX7.Text = BE.PhoneNumber;
@@ -126,7 +125,7 @@ namespace prog_dental
             dataGridViewX1.DataSource = null;
             dataGridViewX1.DataSource = BLL.Read(textBoxX5.Text);
             dataGridViewX1.Columns["Name"].HeaderText = "نام و نام خانوادگی";
-            dataGridViewX1.Columns["HCode"].HeaderText = "کدملی";
+            dataGridViewX1.Columns["CodeMelli_Id"].HeaderText = "کدملی";
             dataGridViewX1.Columns["PhoneNumber"].HeaderText = "تلفن";
             dataGridViewX1.Columns["GroupBload"].HeaderText = "گروه خونی";
             dataGridViewX1.Columns["TimeEnter"].HeaderText = "تاریخ مراجعه اولیه";
@@ -134,7 +133,6 @@ namespace prog_dental
             dataGridViewX1.Columns["Moaref"].HeaderText = "معرف";
             dataGridViewX1.Columns["Jop"].HeaderText = "شغل";
             dataGridViewX1.Columns["Tahsilat"].HeaderText = "تحصیلات";
-            dataGridViewX1.Columns["Id"].HeaderText = "ردیف";
         }
 
         private void TextBoxX2_KeyPress(object sender, KeyPressEventArgs e)

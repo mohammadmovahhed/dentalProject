@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+
 namespace BE_ProgDental
 {
     public class User
@@ -7,7 +9,8 @@ namespace BE_ProgDental
         {
             this.Visits = new HashSet<Visit>();
         }
-        public int CodeMelli { get; set; }
+        [Key]
+        public int CodeMelli_Id { get; set; }
         public string Name { get; set; }
         public string TimeEnter { get; set; }
         public string Tahsilat { get; set; }

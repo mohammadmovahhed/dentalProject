@@ -10,12 +10,12 @@ namespace DAL_Prog_Dental
         DB_Support db = new DB_Support();
         public List<User> Read(string patientss)
         {
-            return db.Users.Where(i => i.Name.Contains(patientss) || i.CodeMelli.ToString().Contains(patientss)).ToList();
+            return db.Users.Where(i => i.Name.Contains(patientss) || i.CodeMelli_Id.ToString().Contains(patientss)).ToList();
         }
 
        public User Read(int id)
         {
-            var q = db.Users.Where(i => i.CodeMelli == id);
+            var q = db.Users.Where(i => i.CodeMelli_Id == id);
             if (q.Count() ==1)
             {
                 return q.Single();
@@ -36,12 +36,12 @@ namespace DAL_Prog_Dental
 
         public List<Doctor> Readdoc(string doctor)
         {
-            return db.Doctors.Where(i => i.Name.Contains(doctor) || i.NezamPezeshki.ToString().Contains(doctor)).ToList(); 
+            return db.Doctors.Where(i => i.Name.Contains(doctor) || i.NezamPezeshki_Id.ToString().Contains(doctor)).ToList(); 
         }
 
         public Doctor Readdoc(int di)
         {
-            var q = db.Doctors.Where(i => i.NezamPezeshki == di);
+            var q = db.Doctors.Where(i => i.NezamPezeshki_Id == di);
             if (q.Count() == 1) 
             {
                 return q.Single();

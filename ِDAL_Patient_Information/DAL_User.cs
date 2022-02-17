@@ -14,7 +14,7 @@ namespace DAL_Prog_Dental
         {//ایجاد شی در بانک اطلاعاتی
             if (!Read(BE))
             {
-                if (BE.CodeMelli.ToString().Length == 10)
+                if (BE.CodeMelli_Id.ToString().Length == 10)
                 {
                     DB.Users.Add(BE);
                     DB.SaveChanges();
@@ -33,7 +33,7 @@ namespace DAL_Prog_Dental
 
         public bool Read(User BE)
         {
-            return DB.Users.Any(i => i.CodeMelli == BE.CodeMelli);
+            return DB.Users.Any(i => i.CodeMelli_Id == BE.CodeMelli_Id);
         }
 
         public List<User> Read(string Name)
@@ -43,7 +43,7 @@ namespace DAL_Prog_Dental
 
         public User Read(int id)
         {
-            var q = DB.Users.Where(i => i.Id == id);
+            var q = DB.Users.Where(i => i.CodeMelli_Id == id);
             if (q.Count() == 1)
             {
                 return q.Single();
@@ -63,7 +63,7 @@ namespace DAL_Prog_Dental
             BE = Read(id);
 
             BE.Name = BENew.Name;
-            BE.CodeMelli = BENew.CodeMelli;
+            BE.CodeMelli_Id = BENew.CodeMelli_Id;
             BE.FatherName = BENew.FatherName;
             BE.TimeEnter = BENew.TimeEnter;
             BE.PhoneNumber = BENew.PhoneNumber;

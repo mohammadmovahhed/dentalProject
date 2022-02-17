@@ -16,7 +16,7 @@ namespace DAL_Prog_Dental
         {
             if (!Read(doc))
             {
-                if (doc.NezamPezeshki.Length == 5)
+                if (doc.NezamPezeshki_Id.ToString().Length == 5)
                 {
                     db.Doctors.Add(doc);
                     db.SaveChanges();
@@ -37,7 +37,7 @@ namespace DAL_Prog_Dental
 
         public bool Read(Doctor doc)
         {
-            return db.Doctors.Any(i => i.NezamPezeshki == doc.NezamPezeshki);
+            return db.Doctors.Any(i => i.NezamPezeshki_Id == doc.NezamPezeshki_Id);
         }
 
 
@@ -49,7 +49,7 @@ namespace DAL_Prog_Dental
 
         public Doctor Read(int id)
         {
-            var q = db.Doctors.Where(i => i.Id == id);
+            var q = db.Doctors.Where(i => i.NezamPezeshki_Id == id);
             if (q.Count() == 1)
             {
                 return q.Single();
@@ -68,7 +68,7 @@ namespace DAL_Prog_Dental
         {
             Doctor doc = Read(id);
             doc.Name = DocNew.Name;
-            doc.NezamPezeshki = DocNew.NezamPezeshki;
+            doc.NezamPezeshki_Id = DocNew.NezamPezeshki_Id;
             doc.Takhasos = DocNew.Takhasos;
             doc.Univercity = DocNew.Univercity;
             doc.Age = DocNew.Age;
