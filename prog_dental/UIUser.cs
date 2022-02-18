@@ -2,6 +2,9 @@
 using System.Windows.Forms;
 using BLL_Prog_Dental;
 using BE_ProgDental;
+using System.Threading.Tasks;
+using DevComponents.DotNetBar.Controls;
+using System.Linq;
 
 namespace prog_dental
 {
@@ -16,7 +19,7 @@ namespace prog_dental
         int id;
         bool flag = true;
 
-        void SetDataGrid()
+        async Task SetDataGrid()
         {
             //بروزرسانی دیتاگرید
             dataGridViewX1.DataSource = null;
@@ -32,7 +35,7 @@ namespace prog_dental
             dataGridViewX1.Columns["Tahsilat"].HeaderText = "تحصیلات";
         }
 
-        void Clear()
+        async Task Clear()
         {
             //پاکسازی تکست باکس ها
             foreach (var item in Controls)
@@ -57,37 +60,87 @@ namespace prog_dental
         //}
 
 
-        private void Guna2GradientButton1_Click(object sender, EventArgs e)
+        private async void Guna2GradientButton1_Click(object sender, EventArgs e)
         {
-
-            User BE = new User
+            var a = groupBox1.Controls.OfType<TextBoxX>().Any(i => i.Text == "");
+            if (a || textBoxX2.TextLength != 10)
             {
-                Name = textBoxX1.Text,
-                CodeMelli_Id = int.Parse(textBoxX2.Text),
-                TimeEnter = dateTimePickerX1.Text,
-                FatherName = textBoxX4.Text,
-                PhoneNumber = textBoxX7.Text,
-                Moaref = textBoxX6.Text,
-                Jop = textBoxX8.Text,
-                GroupBload = comboBoxEx2.Text,
-                Tahsilat = comboBoxEx3.Text
-            };
-
-            if (flag)
-            {
-                //Create
-                MessageBox.Show(BLL.Create(BE));
+                MessageBox.Show("لطفا ابتدا اطلاعات را تکمیل کنید");
             }
-            else if (!flag)
+            else
             {
-                //Update
-                flag = true;
-                guna2GradientButton1.Text = "تشکیل پرونده";
-                MessageBox.Show(BLL.Update(id, BE));
-            }
+                if (await CheakCodeMelli(textBoxX2.Text))
+                {
+                    User BE = new User
+                    {
+                        Name = textBoxX1.Text,
+                        CodeMelli_Id = int.Parse(textBoxX2.Text),
+                        TimeEnter = dateTimePickerX1.Text,
+                        FatherName = textBoxX4.Text,
+                        PhoneNumber = textBoxX7.Text,
+                        Moaref = textBoxX6.Text,
+                        Jop = textBoxX8.Text,
+                        GroupBload = comboBoxEx2.Text,
+                        Tahsilat = comboBoxEx3.Text
+                    };
 
-            SetDataGrid();
-            Clear();
+                    if (flag)
+                    {
+                        //Create
+                        MessageBox.Show(BLL.Create(BE));
+                    }
+                    else if (!flag)
+                    {
+                        //Update
+                        flag = true;
+                        guna2GradientButton1.Text = "تشکیل پرونده";
+                        MessageBox.Show(BLL.Update(id, BE));
+                    }
+                    await SetDataGrid();
+                    await Clear();
+                }
+                else
+                {
+                    MessageBox.Show("کد ملی نامعتبر است لطفا دوباره چک کنید");
+                }
+            }
+        }
+
+        //برسی صحت کد ملی
+        async Task<bool> CheakCodeMelli(string codeMelli)
+        {
+            char[] chArray = codeMelli.ToCharArray();
+            int[] numArray = new int[chArray.Length];
+            for (int i = 0; i < chArray.Length; i++)
+            {
+                numArray[i] = (int)char.GetNumericValue(chArray[i]);
+            }
+            int num2 = numArray[9];
+            switch (codeMelli)
+            {
+                case "0000000000":
+                case "1111111111":
+                case "22222222222":
+                case "33333333333":
+                case "4444444444":
+                case "5555555555":
+                case "6666666666":
+                case "7777777777":
+                case "8888888888":
+                case "9999999999":
+                    MessageBox.Show("کد ملی وارد شده صحیح نمی باشد");
+                    break;
+            }
+            int num3 = ((((((((numArray[0] * 10) + (numArray[1] * 9)) + (numArray[2] * 8)) + (numArray[3] * 7)) + (numArray[4] * 6)) + (numArray[5] * 5)) + (numArray[6] * 4)) + (numArray[7] * 3)) + (numArray[8] * 2);
+            int num4 = num3 - ((num3 / 11) * 11);
+            if ((((num4 == 0) && (num2 == num4)) || ((num4 == 1) && (num2 == 1))) || ((num4 > 1) && (num2 == Math.Abs((int)(num4 - 11)))))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
 
@@ -104,20 +157,19 @@ namespace prog_dental
             comboBoxEx2.Text = BE.GroupBload;
             comboBoxEx3.Text = BE.Tahsilat;
 
-
             flag = false;
             guna2GradientButton1.Text = "ویرایش اطلاعات";
         }
 
-        private void حذفToolStripMenuItem_Click(object sender, EventArgs e)
+        private async void حذفToolStripMenuItem_Click(object sender, EventArgs e)
         {
             BLL.Delete(id);
-            SetDataGrid();
+            await SetDataGrid();
         }
 
-        private void Patient_information_Load(object sender, EventArgs e)
+        private async void Patient_information_Load(object sender, EventArgs e)
         {
-            SetDataGrid();
+            await SetDataGrid();
         }
 
         private void TextBoxX5_TextChanged(object sender, EventArgs e)
@@ -140,40 +192,13 @@ namespace prog_dental
             if (!(char.IsDigit(e.KeyChar) || char.IsControl(e.KeyChar) || char.IsPunctuation(e.KeyChar) && (e.KeyChar == '.')))
             {
                 e.Handled = true;
-
-
                 MessageBox.Show("لطفا فقط عدد وارد کنید");
-
-            }
-        }
-
-        private void TextBoxX3_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!(char.IsDigit(e.KeyChar) || char.IsControl(e.KeyChar) || char.IsPunctuation(e.KeyChar) && (e.KeyChar == '.')))
-            {
-                e.Handled = true;
-
-
-                MessageBox.Show("لطفا فقط عدد وارد کنید");
-
-            }
-        }
-
-        private void TextBoxX7_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!(char.IsDigit(e.KeyChar) || char.IsControl(e.KeyChar) || char.IsPunctuation(e.KeyChar) && (e.KeyChar == '.')))
-            {
-                e.Handled = true;
-
-
-                MessageBox.Show("لطفا فقط عدد وارد کنید");
-
             }
         }
 
         private void DataGridViewX1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            id = Convert.ToInt32(dataGridViewX1.Rows[dataGridViewX1.CurrentRow.Index].Cells["id"].Value);
+            id = Convert.ToInt32(dataGridViewX1.Rows[dataGridViewX1.CurrentRow.Index].Cells["CodeMelli_Id"].Value);
         }
 
         private void DataGridViewX1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -181,18 +206,6 @@ namespace prog_dental
             if (e.ColumnIndex != -1 && e.RowIndex != -1 && e.Button == MouseButtons.Right)
             {
                 contextMenuStrip1.Show(Cursor.Position.X, Cursor.Position.Y);
-            }
-        }
-
-        private void textBoxX5_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!(char.IsDigit(e.KeyChar) || char.IsControl(e.KeyChar) || char.IsPunctuation(e.KeyChar) && (e.KeyChar == '.')))
-            {
-                e.Handled = true;
-
-
-                MessageBox.Show("لطفا فقط عدد وارد کنید");
-
             }
         }
     }

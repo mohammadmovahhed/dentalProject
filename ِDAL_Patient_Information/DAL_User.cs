@@ -14,16 +14,9 @@ namespace DAL_Prog_Dental
         {//ایجاد شی در بانک اطلاعاتی
             if (!Read(BE))
             {
-                if (BE.CodeMelli_Id.ToString().Length == 10)
-                {
-                    DB.Users.Add(BE);
-                    DB.SaveChanges();
-                    return "ثبت اطلاعات با موفقیت انجام شد";
-                }
-                else
-                {
-                    return "کد ملی نامعتبر است لطفا دوباره چک کنید";
-                }
+                DB.Users.Add(BE);
+                DB.SaveChanges();
+                return "ثبت اطلاعات با موفقیت انجام شد";
             }
             else
             {

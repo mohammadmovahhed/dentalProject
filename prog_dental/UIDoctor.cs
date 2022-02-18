@@ -6,6 +6,7 @@ using DevComponents.DotNetBar.Controls;
 using BE_ProgDental;
 using System.IO;
 using BLL_Prog_Dental;
+using System.Threading.Tasks;
 
 namespace prog_dental
 {
@@ -23,7 +24,7 @@ namespace prog_dental
         int id;
 
 
-        void Clear()
+        async Task Clear()
         {
             foreach (var item in groupBox1.Controls)
             {
@@ -34,7 +35,7 @@ namespace prog_dental
             }
         }
 
-        void SetDataGrid()
+        async Task SetDataGrid()
         {
             dataGridViewX1.DataSource = null;
             dataGridViewX1.DataSource = bll.Read();
@@ -77,11 +78,10 @@ namespace prog_dental
         }
 
 
-        private void Guna2GradientButton1_Click(object sender, EventArgs e)
+        private async void Guna2GradientButton1_Click(object sender, EventArgs e)
         {
-
             var a = groupBox1.Controls.OfType<TextBoxX>().Any(i => i.Text == "");
-            if (a)
+            if (a && SavePic(textBoxX2.Text) == null)
             {
                 MessageBox.Show("لطفا ابتدا تمام اطلاعات را تکمیل کنید");
             }
@@ -101,7 +101,7 @@ namespace prog_dental
                     PictureAddress = SavePic(textBoxX2.Text)
                 };
 
-                if (flag && SavePic(textBoxX2.Text) != null)
+                if (flag)
                 {
                     MessageBox.Show(bll.Create(doc));
                 }
@@ -110,8 +110,8 @@ namespace prog_dental
                     MessageBox.Show(bll.Update(doc, id));
                     guna2GradientButton1.Text = "ثبت دکتر";
                 }
-                SetDataGrid();
-                Clear();
+                await SetDataGrid();
+                await Clear();
                 flag = true;
             }
         }
@@ -119,7 +119,7 @@ namespace prog_dental
 
         private void DataGridViewX1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            id = Convert.ToInt32(dataGridViewX1.Rows[dataGridViewX1.CurrentRow.Index].Cells["id"].Value);
+            id = Convert.ToInt32(dataGridViewX1.Rows[dataGridViewX1.CurrentRow.Index].Cells["NezamPezeshki_Id"].Value);
 
             Doctor doctor = bll.Read(id);
             labelX1.Text = doctor.Name;
@@ -150,8 +150,7 @@ namespace prog_dental
         }
 
 
-
-        private void ویرایشToolStripMenuItem_Click(object sender, EventArgs e)
+        private async void ویرایشToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Doctor doc = bll.Read(id);
             textBoxX1.Text = doc.Name;
@@ -164,17 +163,16 @@ namespace prog_dental
             textBoxX9.Text = doc.Darsad;
             flag = false;
             guna2GradientButton1.Text = "ویرایش اطلاعات";
-            SetDataGrid();
+            await SetDataGrid();
             //Clear();
         }
 
 
-
-        private void حذفToolStripMenuItem_Click(object sender, EventArgs e)
+        private async void حذفToolStripMenuItem_Click(object sender, EventArgs e)
         {
             bll.Delete(id);
-            SetDataGrid();
-            Clear();
+            await SetDataGrid();
+            await Clear();
         }
 
         private void TextBoxX8_TextChanged(object sender, EventArgs e)
@@ -194,60 +192,12 @@ namespace prog_dental
 
         }
 
-        private void UIDoctor_Load(object sender, EventArgs e)
+        private async void UIDoctor_Load(object sender, EventArgs e)
         {
-            SetDataGrid();
+            await SetDataGrid();
         }
 
         private void textBoxX2_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!(char.IsDigit(e.KeyChar) || char.IsControl(e.KeyChar) || char.IsPunctuation(e.KeyChar) && (e.KeyChar == '.')))
-            {
-                e.Handled = true;
-
-
-                MessageBox.Show("لطفا فقط عدد وارد کنید");
-
-            }
-        }
-
-        private void textBoxX5_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!(char.IsDigit(e.KeyChar) || char.IsControl(e.KeyChar) || char.IsPunctuation(e.KeyChar) && (e.KeyChar == '.')))
-            {
-                e.Handled = true;
-
-
-                MessageBox.Show("لطفا فقط عدد وارد کنید");
-
-            }
-        }
-
-        private void textBoxX6_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!(char.IsDigit(e.KeyChar) || char.IsControl(e.KeyChar) || char.IsPunctuation(e.KeyChar) && (e.KeyChar == '.')))
-            {
-                e.Handled = true;
-
-
-                MessageBox.Show("لطفا فقط عدد وارد کنید");
-
-            }
-        }
-
-        private void textBoxX9_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!(char.IsDigit(e.KeyChar) || char.IsControl(e.KeyChar) || char.IsPunctuation(e.KeyChar) && (e.KeyChar == '.')))
-            {
-                e.Handled = true;
-
-
-                MessageBox.Show("لطفا فقط عدد وارد کنید");
-
-            }
-        }
-
-        private void textBoxX8_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!(char.IsDigit(e.KeyChar) || char.IsControl(e.KeyChar) || char.IsPunctuation(e.KeyChar) && (e.KeyChar == '.')))
             {

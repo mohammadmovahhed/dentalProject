@@ -70,8 +70,10 @@
             this.textBoxX8 = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.dataGridViewX1 = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.label1 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBoxX1
@@ -82,7 +84,7 @@
             this.textBoxX1.Border.Class = "TextBoxBorder";
             this.textBoxX1.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.textBoxX1.Font = new System.Drawing.Font("IRANSansWeb", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxX1.Location = new System.Drawing.Point(619, 67);
+            this.textBoxX1.Location = new System.Drawing.Point(485, 13);
             this.textBoxX1.MaxLength = 40;
             this.textBoxX1.Name = "textBoxX1";
             this.textBoxX1.PreventEnterBeep = true;
@@ -100,7 +102,7 @@
             this.textBoxX2.Border.Class = "TextBoxBorder";
             this.textBoxX2.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.textBoxX2.Font = new System.Drawing.Font("IRANSansWeb", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxX2.Location = new System.Drawing.Point(619, 111);
+            this.textBoxX2.Location = new System.Drawing.Point(485, 57);
             this.textBoxX2.MaxLength = 10;
             this.textBoxX2.Name = "textBoxX2";
             this.textBoxX2.PreventEnterBeep = true;
@@ -119,7 +121,7 @@
             this.textBoxX4.Border.Class = "TextBoxBorder";
             this.textBoxX4.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.textBoxX4.Font = new System.Drawing.Font("IRANSansWeb", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxX4.Location = new System.Drawing.Point(619, 150);
+            this.textBoxX4.Location = new System.Drawing.Point(485, 96);
             this.textBoxX4.MaxLength = 20;
             this.textBoxX4.Name = "textBoxX4";
             this.textBoxX4.PreventEnterBeep = true;
@@ -190,7 +192,6 @@
             this.textBoxX5.WatermarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(165)))));
             this.textBoxX5.WatermarkText = "جستجو";
             this.textBoxX5.TextChanged += new System.EventHandler(this.TextBoxX5_TextChanged);
-            this.textBoxX5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxX5_KeyPress);
             // 
             // dateTimePickerX1
             // 
@@ -256,7 +257,7 @@
             this.dateTimePickerX1.Font = new System.Drawing.Font("IRANSansWeb", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerX1.Format = BehComponents.DateTimePickerX.FormatDate.Long;
             this.dateTimePickerX1.Format4Binding = "yyyy/MM/dd";
-            this.dateTimePickerX1.Location = new System.Drawing.Point(103, 67);
+            this.dateTimePickerX1.Location = new System.Drawing.Point(6, 12);
             this.dateTimePickerX1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dateTimePickerX1.Name = "dateTimePickerX1";
             this.dateTimePickerX1.RightToLeftLayout = true;
@@ -274,7 +275,7 @@
             this.textBoxX6.Border.Class = "TextBoxBorder";
             this.textBoxX6.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.textBoxX6.Font = new System.Drawing.Font("IRANSansWeb", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxX6.Location = new System.Drawing.Point(356, 112);
+            this.textBoxX6.Location = new System.Drawing.Point(248, 57);
             this.textBoxX6.MaxLength = 30;
             this.textBoxX6.Name = "textBoxX6";
             this.textBoxX6.PreventEnterBeep = true;
@@ -292,7 +293,7 @@
             this.textBoxX7.Border.Class = "TextBoxBorder";
             this.textBoxX7.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.textBoxX7.Font = new System.Drawing.Font("IRANSansWeb", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxX7.Location = new System.Drawing.Point(356, 68);
+            this.textBoxX7.Location = new System.Drawing.Point(248, 13);
             this.textBoxX7.MaxLength = 11;
             this.textBoxX7.Name = "textBoxX7";
             this.textBoxX7.PreventEnterBeep = true;
@@ -301,7 +302,7 @@
             this.textBoxX7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBoxX7.WatermarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
             this.textBoxX7.WatermarkText = "تلفن همراه";
-            this.textBoxX7.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxX7_KeyPress);
+            this.textBoxX7.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxX2_KeyPress);
             // 
             // comboBoxEx2
             // 
@@ -324,7 +325,7 @@
             this.comboItem20,
             this.comboItem21,
             this.comboItem22});
-            this.comboBoxEx2.Location = new System.Drawing.Point(103, 112);
+            this.comboBoxEx2.Location = new System.Drawing.Point(6, 57);
             this.comboBoxEx2.Name = "comboBoxEx2";
             this.comboBoxEx2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.comboBoxEx2.Size = new System.Drawing.Size(180, 35);
@@ -403,7 +404,7 @@
             this.comboItem41,
             this.comboItem42,
             this.comboItem23});
-            this.comboBoxEx3.Location = new System.Drawing.Point(103, 153);
+            this.comboBoxEx3.Location = new System.Drawing.Point(6, 98);
             this.comboBoxEx3.Name = "comboBoxEx3";
             this.comboBoxEx3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.comboBoxEx3.Size = new System.Drawing.Size(180, 35);
@@ -489,7 +490,7 @@
             this.textBoxX8.Border.Class = "TextBoxBorder";
             this.textBoxX8.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.textBoxX8.Font = new System.Drawing.Font("IRANSansWeb", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxX8.Location = new System.Drawing.Point(356, 150);
+            this.textBoxX8.Location = new System.Drawing.Point(248, 95);
             this.textBoxX8.MaxLength = 30;
             this.textBoxX8.Name = "textBoxX8";
             this.textBoxX8.PreventEnterBeep = true;
@@ -531,36 +532,46 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("IRANSansWeb", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(54)))), ((int)(((byte)(44)))));
-            this.label1.Location = new System.Drawing.Point(256, 0);
+            this.label1.Location = new System.Drawing.Point(275, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(321, 49);
             this.label1.TabIndex = 15;
             this.label1.Text = "فرم تشکیل پرونده بیماران";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.textBoxX2);
+            this.groupBox1.Controls.Add(this.textBoxX1);
+            this.groupBox1.Controls.Add(this.textBoxX4);
+            this.groupBox1.Controls.Add(this.textBoxX7);
+            this.groupBox1.Controls.Add(this.comboBoxEx3);
+            this.groupBox1.Controls.Add(this.textBoxX8);
+            this.groupBox1.Controls.Add(this.comboBoxEx2);
+            this.groupBox1.Controls.Add(this.dateTimePickerX1);
+            this.groupBox1.Controls.Add(this.textBoxX6);
+            this.groupBox1.Location = new System.Drawing.Point(105, 45);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(674, 144);
+            this.groupBox1.TabIndex = 16;
+            this.groupBox1.TabStop = false;
             // 
             // Patient_information
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridViewX1);
-            this.Controls.Add(this.textBoxX8);
-            this.Controls.Add(this.comboBoxEx3);
-            this.Controls.Add(this.comboBoxEx2);
-            this.Controls.Add(this.textBoxX7);
-            this.Controls.Add(this.textBoxX6);
-            this.Controls.Add(this.dateTimePickerX1);
             this.Controls.Add(this.textBoxX5);
             this.Controls.Add(this.guna2GradientButton1);
-            this.Controls.Add(this.textBoxX4);
-            this.Controls.Add(this.textBoxX2);
-            this.Controls.Add(this.textBoxX1);
             this.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "Patient_information";
             this.Size = new System.Drawing.Size(890, 594);
             this.Load += new System.EventHandler(this.Patient_information_Load);
             this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -607,5 +618,6 @@
         private DevComponents.Editors.ComboItem comboItem24;
         private DevComponents.DotNetBar.Controls.DataGridViewX dataGridViewX1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

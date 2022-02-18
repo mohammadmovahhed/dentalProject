@@ -67,7 +67,7 @@
             this.textBoxX1.MaxLength = 30;
             this.textBoxX1.Name = "textBoxX1";
             this.textBoxX1.PreventEnterBeep = true;
-            this.textBoxX1.Size = new System.Drawing.Size(455, 34);
+            this.textBoxX1.Size = new System.Drawing.Size(455, 30);
             this.textBoxX1.TabIndex = 0;
             this.textBoxX1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBoxX1.WatermarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
@@ -85,7 +85,7 @@
             this.textBoxX2.MaxLength = 5;
             this.textBoxX2.Name = "textBoxX2";
             this.textBoxX2.PreventEnterBeep = true;
-            this.textBoxX2.Size = new System.Drawing.Size(455, 34);
+            this.textBoxX2.Size = new System.Drawing.Size(455, 30);
             this.textBoxX2.TabIndex = 1;
             this.textBoxX2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBoxX2.WatermarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
@@ -104,7 +104,7 @@
             this.textBoxX3.MaxLength = 50;
             this.textBoxX3.Name = "textBoxX3";
             this.textBoxX3.PreventEnterBeep = true;
-            this.textBoxX3.Size = new System.Drawing.Size(455, 34);
+            this.textBoxX3.Size = new System.Drawing.Size(455, 30);
             this.textBoxX3.TabIndex = 2;
             this.textBoxX3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBoxX3.WatermarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
@@ -122,7 +122,7 @@
             this.textBoxX4.MaxLength = 50;
             this.textBoxX4.Name = "textBoxX4";
             this.textBoxX4.PreventEnterBeep = true;
-            this.textBoxX4.Size = new System.Drawing.Size(455, 34);
+            this.textBoxX4.Size = new System.Drawing.Size(455, 30);
             this.textBoxX4.TabIndex = 3;
             this.textBoxX4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBoxX4.WatermarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
@@ -140,12 +140,12 @@
             this.textBoxX5.MaxLength = 2;
             this.textBoxX5.Name = "textBoxX5";
             this.textBoxX5.PreventEnterBeep = true;
-            this.textBoxX5.Size = new System.Drawing.Size(455, 34);
+            this.textBoxX5.Size = new System.Drawing.Size(455, 30);
             this.textBoxX5.TabIndex = 4;
             this.textBoxX5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBoxX5.WatermarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
             this.textBoxX5.WatermarkText = "سال های خدمت";
-            this.textBoxX5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxX5_KeyPress);
+            this.textBoxX5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxX2_KeyPress);
             // 
             // textBoxX6
             // 
@@ -159,12 +159,12 @@
             this.textBoxX6.MaxLength = 11;
             this.textBoxX6.Name = "textBoxX6";
             this.textBoxX6.PreventEnterBeep = true;
-            this.textBoxX6.Size = new System.Drawing.Size(455, 34);
+            this.textBoxX6.Size = new System.Drawing.Size(455, 30);
             this.textBoxX6.TabIndex = 5;
             this.textBoxX6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBoxX6.WatermarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
             this.textBoxX6.WatermarkText = "تلفن تماس";
-            this.textBoxX6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxX6_KeyPress);
+            this.textBoxX6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxX2_KeyPress);
             // 
             // textBoxX7
             // 
@@ -178,7 +178,7 @@
             this.textBoxX7.MaxLength = 80;
             this.textBoxX7.Name = "textBoxX7";
             this.textBoxX7.PreventEnterBeep = true;
-            this.textBoxX7.Size = new System.Drawing.Size(455, 34);
+            this.textBoxX7.Size = new System.Drawing.Size(455, 30);
             this.textBoxX7.TabIndex = 6;
             this.textBoxX7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBoxX7.WatermarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
@@ -258,13 +258,12 @@
             this.textBoxX8.Location = new System.Drawing.Point(18, 342);
             this.textBoxX8.Name = "textBoxX8";
             this.textBoxX8.PreventEnterBeep = true;
-            this.textBoxX8.Size = new System.Drawing.Size(381, 34);
+            this.textBoxX8.Size = new System.Drawing.Size(381, 30);
             this.textBoxX8.TabIndex = 3;
             this.textBoxX8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBoxX8.WatermarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(165)))));
             this.textBoxX8.WatermarkText = "جست و جو";
             this.textBoxX8.TextChanged += new System.EventHandler(this.TextBoxX8_TextChanged);
-            this.textBoxX8.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxX8_KeyPress);
             // 
             // contextMenuStrip1
             // 
@@ -275,19 +274,19 @@
             this.حذفToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.contextMenuStrip1.Size = new System.Drawing.Size(135, 72);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(124, 60);
             // 
             // ویرایشToolStripMenuItem
             // 
             this.ویرایشToolStripMenuItem.Name = "ویرایشToolStripMenuItem";
-            this.ویرایشToolStripMenuItem.Size = new System.Drawing.Size(134, 34);
+            this.ویرایشToolStripMenuItem.Size = new System.Drawing.Size(123, 28);
             this.ویرایشToolStripMenuItem.Text = "ویرایش";
             this.ویرایشToolStripMenuItem.Click += new System.EventHandler(this.ویرایشToolStripMenuItem_Click);
             // 
             // حذفToolStripMenuItem
             // 
             this.حذفToolStripMenuItem.Name = "حذفToolStripMenuItem";
-            this.حذفToolStripMenuItem.Size = new System.Drawing.Size(134, 34);
+            this.حذفToolStripMenuItem.Size = new System.Drawing.Size(123, 28);
             this.حذفToolStripMenuItem.Text = "حذف";
             this.حذفToolStripMenuItem.Click += new System.EventHandler(this.حذفToolStripMenuItem_Click);
             // 
@@ -303,12 +302,12 @@
             this.textBoxX9.MaxLength = 50;
             this.textBoxX9.Name = "textBoxX9";
             this.textBoxX9.PreventEnterBeep = true;
-            this.textBoxX9.Size = new System.Drawing.Size(455, 34);
+            this.textBoxX9.Size = new System.Drawing.Size(455, 30);
             this.textBoxX9.TabIndex = 7;
             this.textBoxX9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBoxX9.WatermarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
             this.textBoxX9.WatermarkText = "درصد دریافتی";
-            this.textBoxX9.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxX9_KeyPress);
+            this.textBoxX9.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxX2_KeyPress);
             // 
             // dataGridViewX1
             // 
@@ -360,7 +359,7 @@
             // 
             // UIDoctor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.dataGridViewX1);

@@ -41,8 +41,7 @@ namespace prog_dental
 
         private void DataGridViewX1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            id = Convert.ToInt32(dataGridViewX1.Rows[dataGridViewX1.CurrentRow.Index].Cells["id"].Value);
-
+            id = Convert.ToInt32(dataGridViewX1.Rows[dataGridViewX1.CurrentRow.Index].Cells["CodeMelli_Id"].Value);
         }
 
         private void DataGridViewX1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -110,8 +109,7 @@ namespace prog_dental
 
         private void DataGridViewX2_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            di = Convert.ToInt32(dataGridViewX2.Rows[dataGridViewX2.CurrentRow.Index].Cells["id"].Value);
-
+            di = Convert.ToInt32(dataGridViewX2.Rows[dataGridViewX2.CurrentRow.Index].Cells["NezamPezeshki_Id"].Value);
         }
 
         private void TextBoxX1_TextChanged(object sender, EventArgs e)

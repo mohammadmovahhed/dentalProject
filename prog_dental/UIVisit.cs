@@ -227,16 +227,6 @@ namespace prog_dental
             }
         }
 
-        private void textBoxX1_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!(char.IsDigit(e.KeyChar) || char.IsControl(e.KeyChar) || char.IsPunctuation(e.KeyChar) && (e.KeyChar == '.')))
-            {
-                e.Handled = true;
-
-
-                MessageBox.Show("لطفا فقط عدد وارد کنید");
-
-            }
-        }
+       
     }
 }
