@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UIVisit));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.textBoxX2 = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
@@ -67,6 +67,8 @@
             this.ویرایشToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.حذفToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.textBoxX1 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.textBoxXIdBimar = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelCodeMelli = new DevComponents.DotNetBar.LabelX();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -79,7 +81,7 @@
             this.textBoxX2.Border.Class = "TextBoxBorder";
             this.textBoxX2.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.textBoxX2.Font = new System.Drawing.Font("IRANSansWeb", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxX2.Location = new System.Drawing.Point(81, 145);
+            this.textBoxX2.Location = new System.Drawing.Point(90, 139);
             this.textBoxX2.MaxLength = 7;
             this.textBoxX2.Name = "textBoxX2";
             this.textBoxX2.PreventEnterBeep = true;
@@ -98,9 +100,9 @@
             // 
             this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX1.Font = new System.Drawing.Font("IRANSansWeb", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX1.Location = new System.Drawing.Point(772, 61);
+            this.labelX1.Location = new System.Drawing.Point(776, 55);
             this.labelX1.Name = "labelX1";
-            this.labelX1.Size = new System.Drawing.Size(75, 23);
+            this.labelX1.Size = new System.Drawing.Size(75, 33);
             this.labelX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.OfficeMobile2014;
             this.labelX1.TabIndex = 8;
             this.labelX1.Text = "نام بیمار";
@@ -112,9 +114,9 @@
             // 
             this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX2.Font = new System.Drawing.Font("IRANSansWeb", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX2.Location = new System.Drawing.Point(772, 103);
+            this.labelX2.Location = new System.Drawing.Point(776, 96);
             this.labelX2.Name = "labelX2";
-            this.labelX2.Size = new System.Drawing.Size(75, 23);
+            this.labelX2.Size = new System.Drawing.Size(75, 35);
             this.labelX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.OfficeMobile2014;
             this.labelX2.TabIndex = 9;
             this.labelX2.Text = "تشخیص بیمار";
@@ -126,9 +128,9 @@
             // 
             this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX3.Font = new System.Drawing.Font("IRANSansWeb", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX3.Location = new System.Drawing.Point(772, 144);
+            this.labelX3.Location = new System.Drawing.Point(776, 142);
             this.labelX3.Name = "labelX3";
-            this.labelX3.Size = new System.Drawing.Size(75, 23);
+            this.labelX3.Size = new System.Drawing.Size(75, 34);
             this.labelX3.Style = DevComponents.DotNetBar.eDotNetBarStyle.OfficeMobile2014;
             this.labelX3.TabIndex = 10;
             this.labelX3.Text = "نوع بیمه";
@@ -140,9 +142,9 @@
             // 
             this.labelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX4.Font = new System.Drawing.Font("IRANSansWeb", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX4.Location = new System.Drawing.Point(377, 65);
+            this.labelX4.Location = new System.Drawing.Point(386, 53);
             this.labelX4.Name = "labelX4";
-            this.labelX4.Size = new System.Drawing.Size(75, 23);
+            this.labelX4.Size = new System.Drawing.Size(75, 35);
             this.labelX4.Style = DevComponents.DotNetBar.eDotNetBarStyle.OfficeMobile2014;
             this.labelX4.TabIndex = 11;
             this.labelX4.Text = "نام دکتر";
@@ -154,9 +156,9 @@
             // 
             this.labelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX5.Font = new System.Drawing.Font("IRANSansWeb", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX5.Location = new System.Drawing.Point(377, 107);
+            this.labelX5.Location = new System.Drawing.Point(386, 95);
             this.labelX5.Name = "labelX5";
-            this.labelX5.Size = new System.Drawing.Size(75, 23);
+            this.labelX5.Size = new System.Drawing.Size(75, 36);
             this.labelX5.Style = DevComponents.DotNetBar.eDotNetBarStyle.OfficeMobile2014;
             this.labelX5.TabIndex = 12;
             this.labelX5.Text = "تاریخ";
@@ -168,7 +170,7 @@
             // 
             this.labelX6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX6.Font = new System.Drawing.Font("IRANSansWeb", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX6.Location = new System.Drawing.Point(377, 148);
+            this.labelX6.Location = new System.Drawing.Point(386, 142);
             this.labelX6.Name = "labelX6";
             this.labelX6.Size = new System.Drawing.Size(75, 23);
             this.labelX6.Style = DevComponents.DotNetBar.eDotNetBarStyle.OfficeMobile2014;
@@ -182,9 +184,9 @@
             // 
             this.labelX7.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX7.Font = new System.Drawing.Font("IRANSansWeb", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX7.Location = new System.Drawing.Point(724, 201);
+            this.labelX7.Location = new System.Drawing.Point(226, 195);
             this.labelX7.Name = "labelX7";
-            this.labelX7.Size = new System.Drawing.Size(125, 38);
+            this.labelX7.Size = new System.Drawing.Size(107, 38);
             this.labelX7.Style = DevComponents.DotNetBar.eDotNetBarStyle.OfficeMobile2014;
             this.labelX7.TabIndex = 14;
             this.labelX7.Text = ": مبلغ قابل پرداخت ";
@@ -196,7 +198,7 @@
             // 
             this.labelX8.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX8.Font = new System.Drawing.Font("IRANSansWeb", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX8.Location = new System.Drawing.Point(583, 194);
+            this.labelX8.Location = new System.Drawing.Point(85, 188);
             this.labelX8.Name = "labelX8";
             this.labelX8.Size = new System.Drawing.Size(135, 52);
             this.labelX8.Style = DevComponents.DotNetBar.eDotNetBarStyle.OfficeMobile2014;
@@ -212,7 +214,7 @@
             this.guna2GradientButton1.Font = new System.Drawing.Font("IRANSansWeb", 10.2F);
             this.guna2GradientButton1.ForeColor = System.Drawing.Color.White;
             this.guna2GradientButton1.HoverState.Parent = this.guna2GradientButton1;
-            this.guna2GradientButton1.Location = new System.Drawing.Point(341, 199);
+            this.guna2GradientButton1.Location = new System.Drawing.Point(341, 190);
             this.guna2GradientButton1.Name = "guna2GradientButton1";
             this.guna2GradientButton1.ShadowDecoration.Parent = this.guna2GradientButton1;
             this.guna2GradientButton1.Size = new System.Drawing.Size(180, 45);
@@ -283,7 +285,7 @@
             this.dateTimePickerX1.DropDownClosedWhenSelectedDateChanged = false;
             this.dateTimePickerX1.Format = BehComponents.DateTimePickerX.FormatDate.Long;
             this.dateTimePickerX1.Format4Binding = "yyyy/MM/dd";
-            this.dateTimePickerX1.Location = new System.Drawing.Point(81, 101);
+            this.dateTimePickerX1.Location = new System.Drawing.Point(90, 95);
             this.dateTimePickerX1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dateTimePickerX1.Name = "dateTimePickerX1";
             this.dateTimePickerX1.RightToLeftLayout = true;
@@ -302,7 +304,7 @@
             this.comboBoxEx1.Font = new System.Drawing.Font("IRANSansWeb", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxEx1.FormattingEnabled = true;
             this.comboBoxEx1.ItemHeight = 29;
-            this.comboBoxEx1.Location = new System.Drawing.Point(476, 59);
+            this.comboBoxEx1.Location = new System.Drawing.Point(480, 53);
             this.comboBoxEx1.Name = "comboBoxEx1";
             this.comboBoxEx1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.comboBoxEx1.Size = new System.Drawing.Size(290, 35);
@@ -335,7 +337,7 @@
             this.comboItem13,
             this.comboItem14,
             this.comboItem15});
-            this.comboBoxEx2.Location = new System.Drawing.Point(476, 102);
+            this.comboBoxEx2.Location = new System.Drawing.Point(480, 96);
             this.comboBoxEx2.Name = "comboBoxEx2";
             this.comboBoxEx2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.comboBoxEx2.Size = new System.Drawing.Size(290, 35);
@@ -456,7 +458,7 @@
             this.comboBoxEx3.Font = new System.Drawing.Font("IRANSansWeb", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxEx3.FormattingEnabled = true;
             this.comboBoxEx3.ItemHeight = 29;
-            this.comboBoxEx3.Location = new System.Drawing.Point(476, 147);
+            this.comboBoxEx3.Location = new System.Drawing.Point(480, 141);
             this.comboBoxEx3.Name = "comboBoxEx3";
             this.comboBoxEx3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.comboBoxEx3.Size = new System.Drawing.Size(290, 35);
@@ -473,7 +475,7 @@
             this.comboBoxEx4.Font = new System.Drawing.Font("IRANSansWeb", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxEx4.FormattingEnabled = true;
             this.comboBoxEx4.ItemHeight = 29;
-            this.comboBoxEx4.Location = new System.Drawing.Point(81, 59);
+            this.comboBoxEx4.Location = new System.Drawing.Point(90, 53);
             this.comboBoxEx4.Name = "comboBoxEx4";
             this.comboBoxEx4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.comboBoxEx4.Size = new System.Drawing.Size(290, 35);
@@ -486,7 +488,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("IRANSansWeb", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(54)))), ((int)(((byte)(44)))));
-            this.label1.Location = new System.Drawing.Point(316, -1);
+            this.label1.Location = new System.Drawing.Point(344, -1);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(195, 49);
             this.label1.TabIndex = 23;
@@ -499,23 +501,23 @@
             this.dataGridViewX1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewX1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewX1.ContextMenuStrip = this.contextMenuStrip1;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 7.8F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewX1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 7.8F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewX1.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewX1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dataGridViewX1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-            this.dataGridViewX1.Location = new System.Drawing.Point(0, 261);
+            this.dataGridViewX1.Location = new System.Drawing.Point(0, 282);
             this.dataGridViewX1.Name = "dataGridViewX1";
             this.dataGridViewX1.ReadOnly = true;
             this.dataGridViewX1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.dataGridViewX1.RowHeadersWidth = 51;
             this.dataGridViewX1.RowTemplate.Height = 24;
-            this.dataGridViewX1.Size = new System.Drawing.Size(890, 333);
+            this.dataGridViewX1.Size = new System.Drawing.Size(890, 312);
             this.dataGridViewX1.TabIndex = 24;
             this.dataGridViewX1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridViewX1_CellClick);
             this.dataGridViewX1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DataGridViewX1_CellMouseClick);
@@ -553,23 +555,61 @@
             this.textBoxX1.Border.Class = "TextBoxBorder";
             this.textBoxX1.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.textBoxX1.Font = new System.Drawing.Font("IRANSansWeb", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxX1.Location = new System.Drawing.Point(3, 211);
+            this.textBoxX1.Location = new System.Drawing.Point(89, 246);
             this.textBoxX1.MaxLength = 30;
             this.textBoxX1.Name = "textBoxX1";
             this.textBoxX1.PreventEnterBeep = true;
             this.textBoxX1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textBoxX1.Size = new System.Drawing.Size(332, 30);
+            this.textBoxX1.Size = new System.Drawing.Size(685, 30);
             this.textBoxX1.TabIndex = 25;
             this.textBoxX1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBoxX1.WatermarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
             this.textBoxX1.WatermarkText = "جست و جو";
             this.textBoxX1.TextChanged += new System.EventHandler(this.TextBoxX1_TextChanged);
             // 
+            // textBoxXIdBimar
+            // 
+            this.textBoxXIdBimar.BackColor = System.Drawing.Color.LightYellow;
+            // 
+            // 
+            // 
+            this.textBoxXIdBimar.Border.Class = "TextBoxBorder";
+            this.textBoxXIdBimar.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.textBoxXIdBimar.Font = new System.Drawing.Font("IRANSansWeb", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxXIdBimar.Location = new System.Drawing.Point(527, 195);
+            this.textBoxXIdBimar.MaxLength = 10;
+            this.textBoxXIdBimar.Name = "textBoxXIdBimar";
+            this.textBoxXIdBimar.PreventEnterBeep = true;
+            this.textBoxXIdBimar.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.textBoxXIdBimar.Size = new System.Drawing.Size(243, 30);
+            this.textBoxXIdBimar.TabIndex = 26;
+            this.textBoxXIdBimar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxXIdBimar.WatermarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
+            this.textBoxXIdBimar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxX2_KeyPress);
+            // 
+            // labelCodeMelli
+            // 
+            this.labelCodeMelli.BackColor = System.Drawing.Color.LightYellow;
+            // 
+            // 
+            // 
+            this.labelCodeMelli.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelCodeMelli.Font = new System.Drawing.Font("IRANSansWeb", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCodeMelli.Location = new System.Drawing.Point(770, 195);
+            this.labelCodeMelli.Name = "labelCodeMelli";
+            this.labelCodeMelli.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.labelCodeMelli.Size = new System.Drawing.Size(98, 30);
+            this.labelCodeMelli.Style = DevComponents.DotNetBar.eDotNetBarStyle.OfficeMobile2014;
+            this.labelCodeMelli.TabIndex = 27;
+            this.labelCodeMelli.Text = "شماره پرونده بیمار";
+            // 
             // UIVisit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.labelCodeMelli);
+            this.Controls.Add(this.textBoxXIdBimar);
             this.Controls.Add(this.textBoxX1);
             this.Controls.Add(this.dataGridViewX1);
             this.Controls.Add(this.label1);
@@ -636,5 +676,7 @@
         private System.Windows.Forms.ToolStripMenuItem ویرایشToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem حذفToolStripMenuItem;
         private DevComponents.DotNetBar.Controls.TextBoxX textBoxX1;
+        private DevComponents.DotNetBar.Controls.TextBoxX textBoxXIdBimar;
+        private DevComponents.DotNetBar.LabelX labelCodeMelli;
     }
 }

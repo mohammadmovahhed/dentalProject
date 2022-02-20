@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace BE_ProgDental
 {
-    public class Visit
+    public partial class Visit
     {
         public int Id { get; set; }
         public string NameBimar { get; set; }
@@ -13,8 +13,8 @@ namespace BE_ProgDental
         public string ZamanVisit { get; set; }
         public string HazineKol { get; set; }
         public string HazineVisit { get; set; }
-        public int Doctor_NezamPezeshki { get; set; }
-        public int User_CodeMelli { get; set; }
+        public int Doctor_Id { get; set; }
+        public int User_Id { get; set; }
 
         public virtual Doctor Doctor { get; set; }
         public virtual User User { get; set; }

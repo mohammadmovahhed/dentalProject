@@ -23,11 +23,10 @@ namespace prog_dental
         int id;
         bool flag = true;
 
-        public void DGV()
+        public async Task DGV()
         {
             dataGridViewX1.DataSource = null;
             dataGridViewX1.DataSource = bll.Read();
-            dataGridViewX1.Columns["Id"].HeaderText = "ردیف";
             dataGridViewX1.Columns["NameBimar"].HeaderText = "نام بیمار";
             dataGridViewX1.Columns["MoshkelBimar"].HeaderText = "علت مراجعه";
             dataGridViewX1.Columns["Bimeh"].HeaderText = "نوع بیمه";
@@ -35,6 +34,11 @@ namespace prog_dental
             dataGridViewX1.Columns["HazineVisit"].HeaderText = "مبلغ پرداختی";
             dataGridViewX1.Columns["ZamanVisit"].HeaderText = "زمان مراجعه";
             dataGridViewX1.Columns["HazineKol"].HeaderText = "هزینه کل";
+            dataGridViewX1.Columns["Id"].Visible = false;
+            dataGridViewX1.Columns["Doctor_Id"].Visible = false;
+            dataGridViewX1.Columns["User_Id"].Visible = false;
+            dataGridViewX1.Columns["User"].Visible = false;
+            dataGridViewX1.Columns["Doctor"].Visible = false;
         }
 
         int d = 0;
@@ -57,7 +61,7 @@ namespace prog_dental
             labelX8.Text = VisitC.ToString();
         }
 
-        public void Clear()
+        public async Task Clear()
         {
             foreach (var item in Controls)
             {
@@ -69,50 +73,79 @@ namespace prog_dental
         }
 
         BLL_Visit bll = new BLL_Visit();
-        private void Guna2GradientButton1_Click(object sender, EventArgs e)
+        private async void Guna2GradientButton1_Click(object sender, EventArgs e)
         {
-            //var b = this.Controls.OfType<ComboBoxEx>().Any(i => i.Text == "");
-            //if (b || textBoxX2.Text == "")
-            //{
-            //    MessageBox.Show("لطفا ابتدا تمام اطلاعات را تکمیل کنید");
-            //}
-            //else
-            //{
-
-            //فقط برای تست است و بعدا پاک میشود
-            var Quser = from i in bll.ReadPatient() where comboBoxEx1.SelectedItem == i select i;
-            if (Quser.Count() !=null)
+            bool DoCreate = true;
+            var b = this.Controls.OfType<ComboBoxEx>().Any(i => i.Text == "");
+            if (b || textBoxX2.Text == "")
             {
-                MessageBox.Show("aokdj");
+                MessageBox.Show("لطفا ابتدا تمام اطلاعات را تکمیل کنید");
+                DoCreate = false;
             }
-            //Visit visitNew = new Visit
-            //{
-            //    User_ID = Quser.First().Name,
-            //    MoshkelBimar = comboBoxEx2.Text,
-            //    Bimeh = comboBoxEx3.Text,
-            //    DoctorName = comboBoxEx4.Text,
-            //    ZamanVisit = dateTimePickerX1.Text,
-            //    HazineKol = Convert.ToString(textBoxX2.Text),
-            //    HazineVisit = Convert.ToString(labelX8.Text)
-            //};
-            //if (flag)
-            //{
-            //    MessageBox.Show(bll.Create(visitNew));
-            //}
-            //else if (!flag)
-            //{
-            //    flag = true;
-            //    guna2GradientButton1.Text = "تشکیل پرونده";
-            //    MessageBox.Show(bll.Update(id, visitNew));
-            //}
-            //DGV();
-            //Clear();
-            //}
+            else
+            {
+                Visit visitNew = new Visit
+                {
+                    MoshkelBimar = comboBoxEx2.Text,
+                    Bimeh = comboBoxEx3.Text,
+                    ZamanVisit = dateTimePickerX1.Text,
+                    HazineKol = Convert.ToString(textBoxX2.Text),
+                    HazineVisit = Convert.ToString(labelX8.Text),
+                    DoctorName = comboBoxEx4.Text
+                };
+
+                var Quser = from i in bll.ReadPatient() where comboBoxEx1.SelectedItem == i select i;
+                if (Quser.Count() != null)
+                {
+                    visitNew.User_Id = Quser.First().Id;
+                    visitNew.NameBimar = Quser.First().Name;
+                }
+                else
+                {
+                    if (!bll.ReadPatient(textBoxXIdBimar.Text))
+                    {
+                        visitNew.User_Id = int.Parse(textBoxXIdBimar.Text);
+                        visitNew.NameBimar = comboBoxEx1.Text;
+                    }
+                    else
+                    {
+                        MessageBox.Show("شماره پرونده وارد شده در سیستم موجود میباشد");
+                        DoCreate = false;
+                    }
+                }
+
+                var Qdoctor = from i in bll.ReadDoctor() where comboBoxEx4.SelectedItem == i select i;
+                if (Qdoctor.Count() != null)
+                {
+                    visitNew.Doctor_Id = Qdoctor.First().Id;
+                }
+                else
+                {
+                    MessageBox.Show("اطلاعات دکتر دریافت نشد");
+                    DoCreate = false;
+                }
+
+                if (DoCreate)
+                {
+                    if (flag)
+                    {
+                        MessageBox.Show(bll.Create(visitNew));
+                    }
+                    else
+                    {
+                        flag = true;
+                        guna2GradientButton1.Text = "تشکیل پرونده";
+                        MessageBox.Show(bll.Update(id, visitNew));
+                    }
+                    await DGV();
+                    await Clear();
+                }
+            }
         }
 
-        private void UIVisit_Load(object sender, EventArgs e)
+        private async void UIVisit_Load(object sender, EventArgs e)
         {
-            DGV();
+            await DGV();
         }
 
         private void ComboBoxEx1_DropDown(object sender, EventArgs e)
@@ -168,7 +201,7 @@ namespace prog_dental
 
         private void DataGridViewX1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            id = Convert.ToInt32(dataGridViewX1.Rows[dataGridViewX1.CurrentRow.Index].Cells["id"].Value);
+            id = Convert.ToInt32(dataGridViewX1.Rows[dataGridViewX1.CurrentRow.Index].Cells["Id"].Value);
         }
 
         private void DataGridViewX1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -183,7 +216,6 @@ namespace prog_dental
         {
             dataGridViewX1.DataSource = null;
             dataGridViewX1.DataSource = bll.Read(textBoxX1.Text);
-            dataGridViewX1.Columns["Id"].HeaderText = "ردیف";
             dataGridViewX1.Columns["NameBimar"].HeaderText = "نام بیمار";
             dataGridViewX1.Columns["MoshkelBimar"].HeaderText = "علت مراجعه";
             dataGridViewX1.Columns["Bimeh"].HeaderText = "نوع بیمه";
@@ -191,12 +223,17 @@ namespace prog_dental
             dataGridViewX1.Columns["HazineVisit"].HeaderText = "مبلغ پرداختی";
             dataGridViewX1.Columns["ZamanVisit"].HeaderText = "زمان مراجعه";
             dataGridViewX1.Columns["HazineKol"].HeaderText = "هزینه کل";
+            dataGridViewX1.Columns["Id"].Visible = false;
+            dataGridViewX1.Columns["Doctor_Id"].Visible = false;
+            dataGridViewX1.Columns["User_Id"].Visible = false;
+            dataGridViewX1.Columns["User"].Visible = false;
+            dataGridViewX1.Columns["Doctor"].Visible = false;
         }
 
-        private void حذفToolStripMenuItem_Click(object sender, EventArgs e)
+        private async void حذفToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show(bll.Delete(id));
-            DGV();
+            await DGV();
         }
 
         private void ویرایشToolStripMenuItem_Click(object sender, EventArgs e)
@@ -221,12 +258,9 @@ namespace prog_dental
             {
                 e.Handled = true;
 
-
                 MessageBox.Show("لطفا فقط عدد وارد کنید");
 
             }
         }
-
-       
     }
 }

@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Report));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -38,7 +38,6 @@
             this.textBoxX5 = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX22 = new DevComponents.DotNetBar.LabelX();
             this.labelX21 = new DevComponents.DotNetBar.LabelX();
-            this.labelX20 = new DevComponents.DotNetBar.LabelX();
             this.labelX19 = new DevComponents.DotNetBar.LabelX();
             this.labelX18 = new DevComponents.DotNetBar.LabelX();
             this.labelX17 = new DevComponents.DotNetBar.LabelX();
@@ -46,10 +45,8 @@
             this.labelX15 = new DevComponents.DotNetBar.LabelX();
             this.labelX14 = new DevComponents.DotNetBar.LabelX();
             this.labelX13 = new DevComponents.DotNetBar.LabelX();
-            this.labelX12 = new DevComponents.DotNetBar.LabelX();
             this.labelX11 = new DevComponents.DotNetBar.LabelX();
             this.labelX10 = new DevComponents.DotNetBar.LabelX();
-            this.labelX9 = new DevComponents.DotNetBar.LabelX();
             this.labelX8 = new DevComponents.DotNetBar.LabelX();
             this.labelX7 = new DevComponents.DotNetBar.LabelX();
             this.labelX6 = new DevComponents.DotNetBar.LabelX();
@@ -57,7 +54,6 @@
             this.labelX4 = new DevComponents.DotNetBar.LabelX();
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
-            this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.dataGridViewX1 = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.نمایشاطلاعاتToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -114,7 +110,6 @@
             this.tabPage1.Controls.Add(this.textBoxX5);
             this.tabPage1.Controls.Add(this.labelX22);
             this.tabPage1.Controls.Add(this.labelX21);
-            this.tabPage1.Controls.Add(this.labelX20);
             this.tabPage1.Controls.Add(this.labelX19);
             this.tabPage1.Controls.Add(this.labelX18);
             this.tabPage1.Controls.Add(this.labelX17);
@@ -122,10 +117,8 @@
             this.tabPage1.Controls.Add(this.labelX15);
             this.tabPage1.Controls.Add(this.labelX14);
             this.tabPage1.Controls.Add(this.labelX13);
-            this.tabPage1.Controls.Add(this.labelX12);
             this.tabPage1.Controls.Add(this.labelX11);
             this.tabPage1.Controls.Add(this.labelX10);
-            this.tabPage1.Controls.Add(this.labelX9);
             this.tabPage1.Controls.Add(this.labelX8);
             this.tabPage1.Controls.Add(this.labelX7);
             this.tabPage1.Controls.Add(this.labelX6);
@@ -133,12 +126,11 @@
             this.tabPage1.Controls.Add(this.labelX4);
             this.tabPage1.Controls.Add(this.labelX3);
             this.tabPage1.Controls.Add(this.labelX2);
-            this.tabPage1.Controls.Add(this.labelX1);
             this.tabPage1.Controls.Add(this.dataGridViewX1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 27);
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(882, 563);
+            this.tabPage1.Size = new System.Drawing.Size(882, 565);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "گزارشگیری بیماران";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -153,7 +145,7 @@
             this.guna2GradientButton1.Font = new System.Drawing.Font("IRANSansWeb", 10.2F);
             this.guna2GradientButton1.ForeColor = System.Drawing.Color.White;
             this.guna2GradientButton1.HoverState.Parent = this.guna2GradientButton1;
-            this.guna2GradientButton1.Location = new System.Drawing.Point(509, 241);
+            this.guna2GradientButton1.Location = new System.Drawing.Point(500, 178);
             this.guna2GradientButton1.Name = "guna2GradientButton1";
             this.guna2GradientButton1.ShadowDecoration.Parent = this.guna2GradientButton1;
             this.guna2GradientButton1.Size = new System.Drawing.Size(194, 45);
@@ -169,11 +161,11 @@
             this.textBoxX5.Border.Class = "TextBoxBorder";
             this.textBoxX5.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.textBoxX5.Font = new System.Drawing.Font("IRANSansWeb", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxX5.Location = new System.Drawing.Point(172, 241);
+            this.textBoxX5.Location = new System.Drawing.Point(163, 182);
             this.textBoxX5.MaxLength = 30;
             this.textBoxX5.Name = "textBoxX5";
             this.textBoxX5.PreventEnterBeep = true;
-            this.textBoxX5.Size = new System.Drawing.Size(331, 41);
+            this.textBoxX5.Size = new System.Drawing.Size(331, 36);
             this.textBoxX5.TabIndex = 12;
             this.textBoxX5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBoxX5.WatermarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(165)))));
@@ -187,7 +179,7 @@
             // 
             this.labelX22.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX22.Font = new System.Drawing.Font("IRANSansWeb", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX22.Location = new System.Drawing.Point(43, 14);
+            this.labelX22.Location = new System.Drawing.Point(29, 14);
             this.labelX22.Name = "labelX22";
             this.labelX22.Size = new System.Drawing.Size(169, 47);
             this.labelX22.Style = DevComponents.DotNetBar.eDotNetBarStyle.OfficeMobile2014;
@@ -201,26 +193,12 @@
             // 
             this.labelX21.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX21.Font = new System.Drawing.Font("IRANSansWeb", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX21.Location = new System.Drawing.Point(43, 67);
+            this.labelX21.Location = new System.Drawing.Point(29, 67);
             this.labelX21.Name = "labelX21";
             this.labelX21.Size = new System.Drawing.Size(169, 47);
             this.labelX21.Style = DevComponents.DotNetBar.eDotNetBarStyle.OfficeMobile2014;
             this.labelX21.TabIndex = 29;
             this.labelX21.Text = "- - - - - - - - - - - - - - - - - - - -";
-            // 
-            // labelX20
-            // 
-            // 
-            // 
-            // 
-            this.labelX20.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX20.Font = new System.Drawing.Font("IRANSansWeb", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX20.Location = new System.Drawing.Point(306, 173);
-            this.labelX20.Name = "labelX20";
-            this.labelX20.Size = new System.Drawing.Size(169, 47);
-            this.labelX20.Style = DevComponents.DotNetBar.eDotNetBarStyle.OfficeMobile2014;
-            this.labelX20.TabIndex = 28;
-            this.labelX20.Text = "- - - - - - - - - - - - - - - - - - - -";
             // 
             // labelX19
             // 
@@ -229,7 +207,7 @@
             // 
             this.labelX19.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX19.Font = new System.Drawing.Font("IRANSansWeb", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX19.Location = new System.Drawing.Point(290, 120);
+            this.labelX19.Location = new System.Drawing.Point(276, 120);
             this.labelX19.Name = "labelX19";
             this.labelX19.Size = new System.Drawing.Size(169, 47);
             this.labelX19.Style = DevComponents.DotNetBar.eDotNetBarStyle.OfficeMobile2014;
@@ -243,7 +221,7 @@
             // 
             this.labelX18.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX18.Font = new System.Drawing.Font("IRANSansWeb", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX18.Location = new System.Drawing.Point(368, 67);
+            this.labelX18.Location = new System.Drawing.Point(354, 67);
             this.labelX18.Name = "labelX18";
             this.labelX18.Size = new System.Drawing.Size(169, 47);
             this.labelX18.Style = DevComponents.DotNetBar.eDotNetBarStyle.OfficeMobile2014;
@@ -257,7 +235,7 @@
             // 
             this.labelX17.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX17.Font = new System.Drawing.Font("IRANSansWeb", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX17.Location = new System.Drawing.Point(368, 14);
+            this.labelX17.Location = new System.Drawing.Point(354, 14);
             this.labelX17.Name = "labelX17";
             this.labelX17.Size = new System.Drawing.Size(169, 47);
             this.labelX17.Style = DevComponents.DotNetBar.eDotNetBarStyle.OfficeMobile2014;
@@ -271,7 +249,7 @@
             // 
             this.labelX16.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX16.Font = new System.Drawing.Font("IRANSansWeb", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX16.Location = new System.Drawing.Point(43, 120);
+            this.labelX16.Location = new System.Drawing.Point(29, 120);
             this.labelX16.Name = "labelX16";
             this.labelX16.Size = new System.Drawing.Size(169, 47);
             this.labelX16.Style = DevComponents.DotNetBar.eDotNetBarStyle.OfficeMobile2014;
@@ -285,7 +263,7 @@
             // 
             this.labelX15.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX15.Font = new System.Drawing.Font("IRANSansWeb", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX15.Location = new System.Drawing.Point(648, 173);
+            this.labelX15.Location = new System.Drawing.Point(642, 120);
             this.labelX15.Name = "labelX15";
             this.labelX15.Size = new System.Drawing.Size(169, 47);
             this.labelX15.Style = DevComponents.DotNetBar.eDotNetBarStyle.OfficeMobile2014;
@@ -299,7 +277,7 @@
             // 
             this.labelX14.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX14.Font = new System.Drawing.Font("IRANSansWeb", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX14.Location = new System.Drawing.Point(648, 120);
+            this.labelX14.Location = new System.Drawing.Point(642, 67);
             this.labelX14.Name = "labelX14";
             this.labelX14.Size = new System.Drawing.Size(169, 47);
             this.labelX14.Style = DevComponents.DotNetBar.eDotNetBarStyle.OfficeMobile2014;
@@ -313,26 +291,12 @@
             // 
             this.labelX13.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX13.Font = new System.Drawing.Font("IRANSansWeb", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX13.Location = new System.Drawing.Point(588, 67);
+            this.labelX13.Location = new System.Drawing.Point(582, 14);
             this.labelX13.Name = "labelX13";
             this.labelX13.Size = new System.Drawing.Size(169, 47);
             this.labelX13.Style = DevComponents.DotNetBar.eDotNetBarStyle.OfficeMobile2014;
             this.labelX13.TabIndex = 21;
             this.labelX13.Text = "- - - - - - - - - - - - - - - - - - - -";
-            // 
-            // labelX12
-            // 
-            // 
-            // 
-            // 
-            this.labelX12.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX12.Font = new System.Drawing.Font("IRANSansWeb", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX12.Location = new System.Drawing.Point(618, 14);
-            this.labelX12.Name = "labelX12";
-            this.labelX12.Size = new System.Drawing.Size(169, 47);
-            this.labelX12.Style = DevComponents.DotNetBar.eDotNetBarStyle.OfficeMobile2014;
-            this.labelX12.TabIndex = 20;
-            this.labelX12.Text = "- - - - - - - - - - - - - - - - - - - -";
             // 
             // labelX11
             // 
@@ -341,7 +305,7 @@
             // 
             this.labelX11.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX11.Font = new System.Drawing.Font("IRANSansWeb", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX11.Location = new System.Drawing.Point(218, 67);
+            this.labelX11.Location = new System.Drawing.Point(204, 67);
             this.labelX11.Name = "labelX11";
             this.labelX11.Size = new System.Drawing.Size(64, 47);
             this.labelX11.Style = DevComponents.DotNetBar.eDotNetBarStyle.OfficeMobile2014;
@@ -355,26 +319,12 @@
             // 
             this.labelX10.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX10.Font = new System.Drawing.Font("IRANSansWeb", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX10.Location = new System.Drawing.Point(218, 14);
+            this.labelX10.Location = new System.Drawing.Point(204, 14);
             this.labelX10.Name = "labelX10";
             this.labelX10.Size = new System.Drawing.Size(62, 47);
             this.labelX10.Style = DevComponents.DotNetBar.eDotNetBarStyle.OfficeMobile2014;
             this.labelX10.TabIndex = 18;
             this.labelX10.Text = "تحصیلات :";
-            // 
-            // labelX9
-            // 
-            // 
-            // 
-            // 
-            this.labelX9.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX9.Font = new System.Drawing.Font("IRANSansWeb", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX9.Location = new System.Drawing.Point(481, 173);
-            this.labelX9.Name = "labelX9";
-            this.labelX9.Size = new System.Drawing.Size(101, 47);
-            this.labelX9.Style = DevComponents.DotNetBar.eDotNetBarStyle.OfficeMobile2014;
-            this.labelX9.TabIndex = 17;
-            this.labelX9.Text = "دلیل مراجعه اولیه :";
             // 
             // labelX8
             // 
@@ -383,7 +333,7 @@
             // 
             this.labelX8.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX8.Font = new System.Drawing.Font("IRANSansWeb", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX8.Location = new System.Drawing.Point(465, 120);
+            this.labelX8.Location = new System.Drawing.Point(451, 120);
             this.labelX8.Name = "labelX8";
             this.labelX8.Size = new System.Drawing.Size(117, 47);
             this.labelX8.Style = DevComponents.DotNetBar.eDotNetBarStyle.OfficeMobile2014;
@@ -397,7 +347,7 @@
             // 
             this.labelX7.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX7.Font = new System.Drawing.Font("IRANSansWeb", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX7.Location = new System.Drawing.Point(543, 67);
+            this.labelX7.Location = new System.Drawing.Point(529, 67);
             this.labelX7.Name = "labelX7";
             this.labelX7.Size = new System.Drawing.Size(39, 47);
             this.labelX7.Style = DevComponents.DotNetBar.eDotNetBarStyle.OfficeMobile2014;
@@ -411,7 +361,7 @@
             // 
             this.labelX6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX6.Font = new System.Drawing.Font("IRANSansWeb", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX6.Location = new System.Drawing.Point(543, 14);
+            this.labelX6.Location = new System.Drawing.Point(529, 14);
             this.labelX6.Name = "labelX6";
             this.labelX6.Size = new System.Drawing.Size(39, 47);
             this.labelX6.Style = DevComponents.DotNetBar.eDotNetBarStyle.OfficeMobile2014;
@@ -425,7 +375,7 @@
             // 
             this.labelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX5.Font = new System.Drawing.Font("IRANSansWeb", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX5.Location = new System.Drawing.Point(218, 120);
+            this.labelX5.Location = new System.Drawing.Point(204, 120);
             this.labelX5.Name = "labelX5";
             this.labelX5.Size = new System.Drawing.Size(66, 47);
             this.labelX5.Style = DevComponents.DotNetBar.eDotNetBarStyle.OfficeMobile2014;
@@ -439,7 +389,7 @@
             // 
             this.labelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX4.Font = new System.Drawing.Font("IRANSansWeb", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX4.Location = new System.Drawing.Point(823, 173);
+            this.labelX4.Location = new System.Drawing.Point(817, 120);
             this.labelX4.Name = "labelX4";
             this.labelX4.Size = new System.Drawing.Size(45, 47);
             this.labelX4.Style = DevComponents.DotNetBar.eDotNetBarStyle.OfficeMobile2014;
@@ -453,7 +403,7 @@
             // 
             this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX3.Font = new System.Drawing.Font("IRANSansWeb", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX3.Location = new System.Drawing.Point(823, 120);
+            this.labelX3.Location = new System.Drawing.Point(817, 67);
             this.labelX3.Name = "labelX3";
             this.labelX3.Size = new System.Drawing.Size(45, 47);
             this.labelX3.Style = DevComponents.DotNetBar.eDotNetBarStyle.OfficeMobile2014;
@@ -467,26 +417,12 @@
             // 
             this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX2.Font = new System.Drawing.Font("IRANSansWeb", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX2.Location = new System.Drawing.Point(763, 67);
+            this.labelX2.Location = new System.Drawing.Point(757, 14);
             this.labelX2.Name = "labelX2";
             this.labelX2.Size = new System.Drawing.Size(105, 47);
             this.labelX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.OfficeMobile2014;
             this.labelX2.TabIndex = 10;
             this.labelX2.Text = "نام و نام خانوادگی :";
-            // 
-            // labelX1
-            // 
-            // 
-            // 
-            // 
-            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX1.Font = new System.Drawing.Font("IRANSansWeb", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX1.Location = new System.Drawing.Point(793, 14);
-            this.labelX1.Name = "labelX1";
-            this.labelX1.Size = new System.Drawing.Size(75, 47);
-            this.labelX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.OfficeMobile2014;
-            this.labelX1.TabIndex = 9;
-            this.labelX1.Text = "شماره پرونده :";
             // 
             // dataGridViewX1
             // 
@@ -495,22 +431,22 @@
             this.dataGridViewX1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewX1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewX1.ContextMenuStrip = this.contextMenuStrip1;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 7.8F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewX1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 7.8F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewX1.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewX1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dataGridViewX1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-            this.dataGridViewX1.Location = new System.Drawing.Point(3, 303);
+            this.dataGridViewX1.Location = new System.Drawing.Point(3, 243);
             this.dataGridViewX1.Name = "dataGridViewX1";
             this.dataGridViewX1.ReadOnly = true;
             this.dataGridViewX1.RowHeadersWidth = 51;
             this.dataGridViewX1.RowTemplate.Height = 24;
-            this.dataGridViewX1.Size = new System.Drawing.Size(876, 257);
+            this.dataGridViewX1.Size = new System.Drawing.Size(876, 319);
             this.dataGridViewX1.TabIndex = 0;
             this.dataGridViewX1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridViewX1_CellClick);
             this.dataGridViewX1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DataGridViewX1_CellMouseClick);
@@ -521,12 +457,12 @@
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.نمایشاطلاعاتToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(203, 36);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(177, 28);
             // 
             // نمایشاطلاعاتToolStripMenuItem
             // 
             this.نمایشاطلاعاتToolStripMenuItem.Name = "نمایشاطلاعاتToolStripMenuItem";
-            this.نمایشاطلاعاتToolStripMenuItem.Size = new System.Drawing.Size(202, 32);
+            this.نمایشاطلاعاتToolStripMenuItem.Size = new System.Drawing.Size(176, 24);
             this.نمایشاطلاعاتToolStripMenuItem.Text = "نمایش اطلاعات";
             this.نمایشاطلاعاتToolStripMenuItem.Click += new System.EventHandler(this.نمایشاطلاعاتToolStripMenuItem_Click);
             // 
@@ -552,10 +488,10 @@
             this.tabPage2.Controls.Add(this.labelX39);
             this.tabPage2.Controls.Add(this.labelX40);
             this.tabPage2.Controls.Add(this.labelX28);
-            this.tabPage2.Location = new System.Drawing.Point(4, 27);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(882, 563);
+            this.tabPage2.Size = new System.Drawing.Size(882, 565);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "گزارشگیری پزشکان";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -590,7 +526,7 @@
             this.textBoxX1.MaxLength = 30;
             this.textBoxX1.Name = "textBoxX1";
             this.textBoxX1.PreventEnterBeep = true;
-            this.textBoxX1.Size = new System.Drawing.Size(331, 41);
+            this.textBoxX1.Size = new System.Drawing.Size(331, 36);
             this.textBoxX1.TabIndex = 50;
             this.textBoxX1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBoxX1.WatermarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(165)))));
@@ -604,17 +540,17 @@
             this.dataGridViewX2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewX2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewX2.ContextMenuStrip = this.contextMenuStrip2;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 7.8F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewX2.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 7.8F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewX2.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewX2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dataGridViewX2.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-            this.dataGridViewX2.Location = new System.Drawing.Point(3, 267);
+            this.dataGridViewX2.Location = new System.Drawing.Point(3, 269);
             this.dataGridViewX2.Name = "dataGridViewX2";
             this.dataGridViewX2.ReadOnly = true;
             this.dataGridViewX2.RowHeadersWidth = 51;
@@ -630,12 +566,12 @@
             this.contextMenuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.نمایشاطاعاتToolStripMenuItem});
             this.contextMenuStrip2.Name = "contextMenuStrip2";
-            this.contextMenuStrip2.Size = new System.Drawing.Size(197, 36);
+            this.contextMenuStrip2.Size = new System.Drawing.Size(172, 28);
             // 
             // نمایشاطاعاتToolStripMenuItem
             // 
             this.نمایشاطاعاتToolStripMenuItem.Name = "نمایشاطاعاتToolStripMenuItem";
-            this.نمایشاطاعاتToolStripMenuItem.Size = new System.Drawing.Size(196, 32);
+            this.نمایشاطاعاتToolStripMenuItem.Size = new System.Drawing.Size(171, 24);
             this.نمایشاطاعاتToolStripMenuItem.Text = "نمایش اطاعات";
             this.نمایشاطاعاتToolStripMenuItem.Click += new System.EventHandler(this.نمایشاطاعاتToolStripMenuItem_Click);
             // 
@@ -926,7 +862,7 @@
             // 
             // Report
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.tabControl1);
@@ -951,7 +887,6 @@
         private System.Windows.Forms.TabPage tabPage2;
         private DevComponents.DotNetBar.Controls.DataGridViewX dataGridViewX1;
         private DevComponents.DotNetBar.LabelX labelX10;
-        private DevComponents.DotNetBar.LabelX labelX9;
         private DevComponents.DotNetBar.LabelX labelX8;
         private DevComponents.DotNetBar.LabelX labelX7;
         private DevComponents.DotNetBar.LabelX labelX6;
@@ -959,10 +894,8 @@
         private DevComponents.DotNetBar.LabelX labelX4;
         private DevComponents.DotNetBar.LabelX labelX3;
         private DevComponents.DotNetBar.LabelX labelX2;
-        private DevComponents.DotNetBar.LabelX labelX1;
         private DevComponents.DotNetBar.LabelX labelX22;
         private DevComponents.DotNetBar.LabelX labelX21;
-        private DevComponents.DotNetBar.LabelX labelX20;
         private DevComponents.DotNetBar.LabelX labelX19;
         private DevComponents.DotNetBar.LabelX labelX18;
         private DevComponents.DotNetBar.LabelX labelX17;
@@ -970,7 +903,6 @@
         private DevComponents.DotNetBar.LabelX labelX15;
         private DevComponents.DotNetBar.LabelX labelX14;
         private DevComponents.DotNetBar.LabelX labelX13;
-        private DevComponents.DotNetBar.LabelX labelX12;
         private DevComponents.DotNetBar.LabelX labelX11;
         private DevComponents.DotNetBar.Controls.TextBoxX textBoxX5;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;

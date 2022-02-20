@@ -3,14 +3,15 @@ using System.ComponentModel.DataAnnotations;
 
 namespace BE_ProgDental
 {
-    public class User
+    public partial class User
     {
         public User()
         {
             this.Visits = new HashSet<Visit>();
         }
         [Key]
-        public int CodeMelli_Id { get; set; }
+        public int Id { get; set; }
+        public string CodeMelli { get; set; }
         public string Name { get; set; }
         public string TimeEnter { get; set; }
         public string Tahsilat { get; set; }

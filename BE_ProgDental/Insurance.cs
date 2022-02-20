@@ -1,6 +1,6 @@
 ﻿namespace BE_ProgDental
 {
-    public class Insurance
+    public partial class Insurance
     {
         public int Id { get; set; }
         public string NameInsurance { get; set; }

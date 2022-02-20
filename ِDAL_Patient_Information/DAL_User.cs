@@ -26,7 +26,7 @@ namespace DAL_Prog_Dental
 
         public bool Read(User BE)
         {
-            return DB.Users.Any(i => i.CodeMelli_Id == BE.CodeMelli_Id);
+            return DB.Users.Any(i => i.CodeMelli == BE.CodeMelli);
         }
 
         public List<User> Read(string Name)
@@ -36,7 +36,7 @@ namespace DAL_Prog_Dental
 
         public User Read(int id)
         {
-            var q = DB.Users.Where(i => i.CodeMelli_Id == id);
+            var q = DB.Users.Where(i => i.Id == id);
             if (q.Count() == 1)
             {
                 return q.Single();
@@ -56,7 +56,7 @@ namespace DAL_Prog_Dental
             BE = Read(id);
 
             BE.Name = BENew.Name;
-            BE.CodeMelli_Id = BENew.CodeMelli_Id;
+            BE.CodeMelli = BENew.CodeMelli;
             BE.FatherName = BENew.FatherName;
             BE.TimeEnter = BENew.TimeEnter;
             BE.PhoneNumber = BENew.PhoneNumber;

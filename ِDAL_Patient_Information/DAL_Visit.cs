@@ -11,6 +11,10 @@ namespace DAL_Prog_Dental
         {
             return dbs.Users.ToList();
         }
+        public bool ReadPatient(string IdBimar)
+        {
+            return dbs.Users.Any(i=> i.Id == int.Parse(IdBimar));
+        }
 
         public List<Doctor> ReadDoctor()
         {
@@ -71,5 +75,7 @@ namespace DAL_Prog_Dental
             dbs.SaveChanges();
             return "حدف با موفقیت انجام شد ";
         }
+
+        
     }
 }

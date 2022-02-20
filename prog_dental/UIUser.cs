@@ -25,7 +25,7 @@ namespace prog_dental
             dataGridViewX1.DataSource = null;
             dataGridViewX1.DataSource = BLL.Read();
             dataGridViewX1.Columns["Name"].HeaderText = "نام و نام خانوادگی";
-            dataGridViewX1.Columns["CodeMelli_Id"].HeaderText = "کدملی";
+            dataGridViewX1.Columns["CodeMelli"].HeaderText = "کدملی";
             dataGridViewX1.Columns["PhoneNumber"].HeaderText = "تلفن";
             dataGridViewX1.Columns["GroupBload"].HeaderText = "گروه خونی";
             dataGridViewX1.Columns["TimeEnter"].HeaderText = "تاریخ مراجعه اولیه";
@@ -33,12 +33,14 @@ namespace prog_dental
             dataGridViewX1.Columns["Moaref"].HeaderText = "معرف";
             dataGridViewX1.Columns["Jop"].HeaderText = "شغل";
             dataGridViewX1.Columns["Tahsilat"].HeaderText = "تحصیلات";
+            dataGridViewX1.Columns["Id"].Visible = false;
+            dataGridViewX1.Columns["Visits"].Visible = false;
         }
 
         async Task Clear()
         {
             //پاکسازی تکست باکس ها
-            foreach (var item in Controls)
+            foreach (var item in groupBox1.Controls)
             {
                 if (item.GetType().ToString() == "DevComponents.DotNetBar.Controls.TextBoxX")
                 {
@@ -46,18 +48,6 @@ namespace prog_dental
                 }
             }
         }
-
-        //void NumberParvandeh()
-        //{
-        //    //نمایش اخرین شماره پرونده بیمار 
-        //    int new_NParvandeh = 0;
-        //    foreach (var item in BLL.Read())
-        //    {
-        //        new_NParvandeh = Convert.ToInt32(item.NParvandeh);
-        //    }
-        //    new_NParvandeh += 1;
-        //    label2.Text = new_NParvandeh.ToString();
-        //}
 
 
         private async void Guna2GradientButton1_Click(object sender, EventArgs e)
@@ -69,86 +59,43 @@ namespace prog_dental
             }
             else
             {
-                if (await CheakCodeMelli(textBoxX2.Text))
+                User BE = new User
                 {
-                    User BE = new User
-                    {
-                        Name = textBoxX1.Text,
-                        CodeMelli_Id = int.Parse(textBoxX2.Text),
-                        TimeEnter = dateTimePickerX1.Text,
-                        FatherName = textBoxX4.Text,
-                        PhoneNumber = textBoxX7.Text,
-                        Moaref = textBoxX6.Text,
-                        Jop = textBoxX8.Text,
-                        GroupBload = comboBoxEx2.Text,
-                        Tahsilat = comboBoxEx3.Text
-                    };
+                    Name = textBoxX1.Text,
+                    CodeMelli = textBoxX2.Text,
+                    TimeEnter = dateTimePickerX1.Text,
+                    FatherName = textBoxX4.Text,
+                    PhoneNumber = textBoxX7.Text,
+                    Moaref = textBoxX6.Text,
+                    Jop = textBoxX8.Text,
+                    GroupBload = comboBoxEx2.Text,
+                    Tahsilat = comboBoxEx3.Text
+                };
 
-                    if (flag)
-                    {
-                        //Create
-                        MessageBox.Show(BLL.Create(BE));
-                    }
-                    else if (!flag)
-                    {
-                        //Update
-                        flag = true;
-                        guna2GradientButton1.Text = "تشکیل پرونده";
-                        MessageBox.Show(BLL.Update(id, BE));
-                    }
-                    await SetDataGrid();
-                    await Clear();
-                }
-                else
+                if (flag)
                 {
-                    MessageBox.Show("کد ملی نامعتبر است لطفا دوباره چک کنید");
+                    //Create
+                    MessageBox.Show(BLL.Create(BE));
                 }
+                else if (!flag)
+                {
+                    //Update
+                    flag = true;
+                    guna2GradientButton1.Text = "تشکیل پرونده";
+                    MessageBox.Show(BLL.Update(id, BE));
+                }
+                await SetDataGrid();
+                await Clear();
             }
         }
 
-        //برسی صحت کد ملی
-        async Task<bool> CheakCodeMelli(string codeMelli)
-        {
-            char[] chArray = codeMelli.ToCharArray();
-            int[] numArray = new int[chArray.Length];
-            for (int i = 0; i < chArray.Length; i++)
-            {
-                numArray[i] = (int)char.GetNumericValue(chArray[i]);
-            }
-            int num2 = numArray[9];
-            switch (codeMelli)
-            {
-                case "0000000000":
-                case "1111111111":
-                case "22222222222":
-                case "33333333333":
-                case "4444444444":
-                case "5555555555":
-                case "6666666666":
-                case "7777777777":
-                case "8888888888":
-                case "9999999999":
-                    MessageBox.Show("کد ملی وارد شده صحیح نمی باشد");
-                    break;
-            }
-            int num3 = ((((((((numArray[0] * 10) + (numArray[1] * 9)) + (numArray[2] * 8)) + (numArray[3] * 7)) + (numArray[4] * 6)) + (numArray[5] * 5)) + (numArray[6] * 4)) + (numArray[7] * 3)) + (numArray[8] * 2);
-            int num4 = num3 - ((num3 / 11) * 11);
-            if ((((num4 == 0) && (num2 == num4)) || ((num4 == 1) && (num2 == 1))) || ((num4 > 1) && (num2 == Math.Abs((int)(num4 - 11)))))
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
 
 
         private void ویرایشToolStripMenuItem_Click(object sender, EventArgs e)
         {
             User BE = BLL.Read(id);
             textBoxX1.Text = BE.Name;
-            textBoxX2.Text = BE.CodeMelli_Id.ToString();
+            textBoxX2.Text = BE.CodeMelli;
             dateTimePickerX1.Text = BE.TimeEnter;
             textBoxX4.Text = BE.FatherName;
             textBoxX7.Text = BE.PhoneNumber;
@@ -177,7 +124,7 @@ namespace prog_dental
             dataGridViewX1.DataSource = null;
             dataGridViewX1.DataSource = BLL.Read(textBoxX5.Text);
             dataGridViewX1.Columns["Name"].HeaderText = "نام و نام خانوادگی";
-            dataGridViewX1.Columns["CodeMelli_Id"].HeaderText = "کدملی";
+            dataGridViewX1.Columns["CodeMelli"].HeaderText = "کدملی";
             dataGridViewX1.Columns["PhoneNumber"].HeaderText = "تلفن";
             dataGridViewX1.Columns["GroupBload"].HeaderText = "گروه خونی";
             dataGridViewX1.Columns["TimeEnter"].HeaderText = "تاریخ مراجعه اولیه";
@@ -185,6 +132,8 @@ namespace prog_dental
             dataGridViewX1.Columns["Moaref"].HeaderText = "معرف";
             dataGridViewX1.Columns["Jop"].HeaderText = "شغل";
             dataGridViewX1.Columns["Tahsilat"].HeaderText = "تحصیلات";
+            dataGridViewX1.Columns["Id"].Visible = false;
+            dataGridViewX1.Columns["Visits"].Visible = false;
         }
 
         private void TextBoxX2_KeyPress(object sender, KeyPressEventArgs e)
@@ -198,7 +147,7 @@ namespace prog_dental
 
         private void DataGridViewX1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            id = Convert.ToInt32(dataGridViewX1.Rows[dataGridViewX1.CurrentRow.Index].Cells["CodeMelli_Id"].Value);
+            id = Convert.ToInt32(dataGridViewX1.Rows[dataGridViewX1.CurrentRow.Index].Cells["Id"].Value);
         }
 
         private void DataGridViewX1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)

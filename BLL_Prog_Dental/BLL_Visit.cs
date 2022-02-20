@@ -12,6 +12,11 @@ namespace BLL_Prog_Dental
             return dal.ReadPatient();
         }
 
+        public bool ReadPatient(string IdBimar)
+        {
+            return dal.ReadPatient(IdBimar);
+        }
+
         public List<Doctor> ReadDoctor()
         {
             return dal.ReadDoctor();
