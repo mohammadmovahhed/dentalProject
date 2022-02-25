@@ -80,11 +80,13 @@ namespace prog_dental
 
         private void Guna2GradientButton1_Click(object sender, EventArgs e)
         {
+            string file = Environment.CurrentDirectory + "\\PatientVisitReport.mrt";
+            stiReport2.Load(file);
             stiReport2.Dictionary.Variables["Name"].Value = labelX13.Text;
-            //stiReport2.Dictionary.Variables["CodeMelli"].Value = labelX14.Text;
+            stiReport2.Dictionary.Variables["CodeMelli"].Value = labelX14.Text;
             stiReport2.Dictionary.Variables["FatherName"].Value = labelX15.Text;
             stiReport2.Dictionary.Variables["PhoneNumber"].Value = labelX16.Text;
-            stiReport2.Dictionary.Variables["Moaref"].Value = labelX17.Text;
+            //stiReport2.Dictionary.Variables["Moaref"].Value = labelX17.Text;
             stiReport2.Dictionary.Variables["Jop"].Value = labelX18.Text;
             stiReport2.Dictionary.Variables["GroupBload"].Value = labelX21.Text;
             stiReport2.Dictionary.Variables["Tahsilat"].Value = labelX22.Text;
@@ -122,7 +124,7 @@ namespace prog_dental
             dataGridViewX2.Columns["Phone"].HeaderText = "تلفن تماس";
             dataGridViewX2.Columns["Univercity"].HeaderText = "دانشگاه";
             dataGridViewX2.Columns["Age"].HeaderText = "تعداد سال های خدمت";
-            dataGridViewX2.Columns["Darsad"].HeaderText = "درصد دریافتی";
+            dataGridViewX2.Columns["darsad"].HeaderText = "درصد دریافتی";
             dataGridViewX2.Columns["Address"].HeaderText = "آدرس";
             dataGridViewX2.Columns["PictureAddress"].Visible = false;
             dataGridViewX2.Columns["Id"].Visible = false;
@@ -162,6 +164,8 @@ namespace prog_dental
 
         private void Guna2GradientButton2_Click(object sender, EventArgs e)
         {
+            string file = Environment.CurrentDirectory + "\\DoctorVisitReporT.mrt";
+            stiReport3.Load(file);
             stiReport3.Dictionary.Variables["NezamPezeshki"].Value = labelX30.Text;
             stiReport3.Dictionary.Variables["Name"].Value = labelX31.Text;
             stiReport3.Dictionary.Variables["Takhasos"].Value = labelX29.Text;

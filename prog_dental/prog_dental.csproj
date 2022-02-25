@@ -157,6 +157,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Report.resx">
       <DependentUpon>Report.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="UIDoctor.resx">
       <DependentUpon>UIDoctor.cs</DependentUpon>
@@ -167,6 +168,7 @@
     <EmbeddedResource Include="UIVisit.resx">
       <DependentUpon>UIVisit.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="bin\Debug\DoctorVisitReporT.mrt" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
