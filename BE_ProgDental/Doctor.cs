@@ -5,11 +5,6 @@ namespace BE_ProgDental
 {
     public partial class Doctor
     {
-        public Doctor()
-        {
-            this.Visits = new HashSet<Visit>();
-        } 
-        [Key]
         public int Id { get; set; }
         public string NezamPezeshki { get; set; }
         public string Name { get; set; }
@@ -20,7 +15,5 @@ namespace BE_ProgDental
         public byte Age { get; set; }
         public string Address { get; set; }
         public string PictureAddress { get; set; }
-        
-        public virtual ICollection<Visit> Visits { get; set; }
     }
 }

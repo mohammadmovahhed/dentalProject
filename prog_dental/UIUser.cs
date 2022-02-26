@@ -15,9 +15,9 @@ namespace prog_dental
             InitializeComponent();
         }
 
-        BLL_User BLL = new BLL_User();
-        int id;
-        bool flag = true;
+        private readonly BLL_User BLL = new BLL_User();
+        private int id;
+        private bool flag = true;
 
         async Task SetDataGrid()
         {
@@ -34,7 +34,7 @@ namespace prog_dental
             dataGridViewX1.Columns["Jop"].HeaderText = "شغل";
             dataGridViewX1.Columns["Tahsilat"].HeaderText = "تحصیلات";
             dataGridViewX1.Columns["Id"].Visible = false;
-            dataGridViewX1.Columns["Visits"].Visible = false;
+            //dataGridViewX1.Columns["Visits"].Visible = false;
         }
 
         async Task Clear()
@@ -52,7 +52,7 @@ namespace prog_dental
 
         private async void Guna2GradientButton1_Click(object sender, EventArgs e)
         {
-            var a = groupBox1.Controls.OfType<TextBoxX>().Any(i => i.Text == "");
+            bool a = groupBox1.Controls.OfType<TextBoxX>().Any(i => i.Text == "");
             if (a || textBoxX2.TextLength != 10)
             {
                 MessageBox.Show("لطفا ابتدا اطلاعات را تکمیل کنید");
@@ -133,7 +133,7 @@ namespace prog_dental
             dataGridViewX1.Columns["Jop"].HeaderText = "شغل";
             dataGridViewX1.Columns["Tahsilat"].HeaderText = "تحصیلات";
             dataGridViewX1.Columns["Id"].Visible = false;
-            dataGridViewX1.Columns["Visits"].Visible = false;
+            //dataGridViewX1.Columns["Visits"].Visible = false;
         }
 
         private void TextBoxX2_KeyPress(object sender, KeyPressEventArgs e)

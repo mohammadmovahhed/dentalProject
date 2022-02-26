@@ -94,35 +94,26 @@ namespace prog_dental
                     DoctorName = comboBoxEx4.Text
                 };
 
-                var Quser = from i in bll.ReadPatient() where comboBoxEx1.SelectedItem == i select i;
-                if (Quser.Count() != null)
+                var Quser = from i in bll.ReadPatient() where comboBoxEx1.Text == i.Name select i;
+                if (Quser.FirstOrDefault() == null)
                 {
-                    visitNew.User_Id = Quser.First().Id;
-                    visitNew.NameBimar = Quser.First().Name;
+                    visitNew.NameBimar = comboBoxEx1.Text;
                 }
                 else
                 {
-                    if (!bll.ReadPatient(textBoxXIdBimar.Text))
-                    {
-                        visitNew.User_Id = int.Parse(textBoxXIdBimar.Text);
-                        visitNew.NameBimar = comboBoxEx1.Text;
-                    }
-                    else
-                    {
-                        MessageBox.Show("شماره پرونده وارد شده در سیستم موجود میباشد");
-                        DoCreate = false;
-                    }
+                    visitNew.User_Id = Quser.FirstOrDefault().Id;
+                    visitNew.NameBimar = Quser.FirstOrDefault().Name;
                 }
 
                 var Qdoctor = from i in bll.ReadDoctor() where comboBoxEx4.SelectedItem == i select i;
-                if (Qdoctor.Count() != null)
-                {
-                    visitNew.Doctor_Id = Qdoctor.First().Id;
-                }
-                else
+                if (Qdoctor.FirstOrDefault() == null)
                 {
                     MessageBox.Show("اطلاعات دکتر دریافت نشد");
                     DoCreate = false;
+                }
+                else
+                {
+                    visitNew.Doctor_Id = Qdoctor.First().Id;
                 }
 
                 if (DoCreate)

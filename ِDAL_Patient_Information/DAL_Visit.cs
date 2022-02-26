@@ -6,14 +6,14 @@ namespace DAL_Prog_Dental
 {
     public class DAL_Visit
     {
-        DB_Support dbs = new DB_Support();
+        private readonly DB_Support dbs = new DB_Support();
         public List<User> ReadPatient()
         {
             return dbs.Users.ToList();
         }
         public bool ReadPatient(string IdBimar)
         {
-            return dbs.Users.Any(i=> i.Id == int.Parse(IdBimar));
+            return dbs.Users.AsEnumerable().Any(i => i.Id == int.Parse(IdBimar));
         }
 
         public List<Doctor> ReadDoctor()
@@ -46,14 +46,10 @@ namespace DAL_Prog_Dental
         public Visit Read(int id)
         {
             var q = dbs.Visits.Where(i => i.Id == id);
-            if (q.Count()==1)
-            {
-                return q.Single();
-            }
-            return null;
+            return q.Count() == 1 ? q.Single() : null;
         }
 
-        public string Update(int id,Visit NewNobatdehi)
+        public string Update(int id, Visit NewNobatdehi)
         {
             Visit nobatdehi = Read(id);
             nobatdehi.NameBimar = NewNobatdehi.NameBimar;
@@ -76,6 +72,6 @@ namespace DAL_Prog_Dental
             return "حدف با موفقیت انجام شد ";
         }
 
-        
+
     }
 }

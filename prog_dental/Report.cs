@@ -12,9 +12,9 @@ namespace prog_dental
             InitializeComponent();
         }
 
-        BLL_Report blr = new BLL_Report();
-        int id;
-        int di;
+        readonly BLL_Report blr = new BLL_Report();
+        private int id;
+        private int di;
 
         private void TextBoxX5_TextChanged(object sender, EventArgs e)
         {
@@ -31,7 +31,7 @@ namespace prog_dental
             dataGridViewX1.Columns["Jop"].HeaderText = "شغل";
             dataGridViewX1.Columns["Tahsilat"].HeaderText = "تحصیلات";
             dataGridViewX1.Columns["Id"].Visible = false;
-            dataGridViewX1.Columns["Visits"].Visible = false;
+            //dataGridViewX1.Columns["Visits"].Visible = false;
         }
 
         private void DataGridViewX1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -60,8 +60,8 @@ namespace prog_dental
             labelX21.Text = pi.GroupBload;
             labelX22.Text = pi.Tahsilat;
 
-            dataGridViewX2.DataSource = null;
-            dataGridViewX1.DataSource = null;
+            dataGridViewX2.DataSource = dataGridViewX1.DataSource = null;
+
             dataGridViewX1.DataSource = blr.Readn(pi.Name);
             guna2GradientButton1.Enabled = true;
             dataGridViewX1.Columns["NameBimar"].HeaderText = "نام بیمار";
@@ -128,7 +128,7 @@ namespace prog_dental
             dataGridViewX2.Columns["Address"].HeaderText = "آدرس";
             dataGridViewX2.Columns["PictureAddress"].Visible = false;
             dataGridViewX2.Columns["Id"].Visible = false;
-            dataGridViewX2.Columns["Visits"].Visible = false;
+            //dataGridViewX2.Columns["Visits"].Visible = false;
         }
 
         private void نمایشاطاعاتToolStripMenuItem_Click(object sender, EventArgs e)
@@ -142,10 +142,10 @@ namespace prog_dental
             labelX23.Text = doc.Address;
             labelX24.Text = doc.Darsad;
             labelX27.Text = doc.Univercity;
-            labelX28.Text = doc.PictureAddress;
+            //labelX28.Text = doc.PictureAddress;
 
-            dataGridViewX1.DataSource = null;
-            dataGridViewX2.DataSource = null;
+            dataGridViewX1.DataSource = dataGridViewX2.DataSource = null;
+
             dataGridViewX2.DataSource = blr.Readd(doc.Name);
             guna2GradientButton2.Enabled = true;
             dataGridViewX2.Columns["NameBimar"].HeaderText = "نام بیمار";

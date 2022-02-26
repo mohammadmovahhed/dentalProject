@@ -17,11 +17,11 @@ namespace prog_dental
             InitializeComponent();
         }
 
-        BLL_Doctor bll = new BLL_Doctor();
-        Image pic;
-        OpenFileDialog f = new OpenFileDialog();
-        bool flag = true;
-        int id;
+        private readonly BLL_Doctor bll = new BLL_Doctor();
+        private Image pic;
+        private OpenFileDialog f = new OpenFileDialog();
+        private bool flag = true;
+        private int id;
 
 
         async Task Clear()
@@ -49,7 +49,7 @@ namespace prog_dental
             dataGridViewX1.Columns["Address"].HeaderText = "آدرس";
             dataGridViewX1.Columns["PictureAddress"].Visible = false;
             dataGridViewX1.Columns["Id"].Visible = false;
-            dataGridViewX1.Columns["Visits"].Visible = false;
+            //dataGridViewX1.Columns["Visits"].Visible = false;
         }
 
         string SavePic(string NezamP)
@@ -82,7 +82,7 @@ namespace prog_dental
 
         private async void Guna2GradientButton1_Click(object sender, EventArgs e)
         {
-            var a = groupBox1.Controls.OfType<TextBoxX>().Any(i => i.Text == "");
+            bool a = groupBox1.Controls.OfType<TextBoxX>().Any(i => i.Text == "");
             if (a && SavePic(textBoxX2.Text) == null)
             {
                 MessageBox.Show("لطفا ابتدا تمام اطلاعات را تکمیل کنید");
@@ -107,11 +107,12 @@ namespace prog_dental
                 {
                     MessageBox.Show(bll.Create(doc));
                 }
-                else if (!flag)
+                else
                 {
                     MessageBox.Show(bll.Update(doc, id));
                     guna2GradientButton1.Text = "ثبت دکتر";
                 }
+
                 await SetDataGrid();
                 await Clear();
                 flag = true;
@@ -129,7 +130,10 @@ namespace prog_dental
             labelX1.Visible = true;
             labelX2.Visible = true;
 
-            guna2PictureBox1.Image = Image.FromFile(doctor.PictureAddress);
+            if (doctor.PictureAddress != null)
+            {
+                guna2PictureBox1.Image = Image.FromFile(doctor.PictureAddress);
+            }
         }
 
         private void DataGridViewX1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -191,7 +195,7 @@ namespace prog_dental
             dataGridViewX1.Columns["Address"].HeaderText = "آدرس";
             dataGridViewX1.Columns["PictureAddress"].Visible = false;
             dataGridViewX1.Columns["Id"].Visible = false;
-            dataGridViewX1.Columns["Visits"].Visible = false;
+            //dataGridViewX1.Columns["Visits"].Visible = false;
         }
 
         private async void UIDoctor_Load(object sender, EventArgs e)
@@ -207,7 +211,6 @@ namespace prog_dental
 
 
                 MessageBox.Show("لطفا فقط عدد وارد کنید");
-
             }
         }
     }

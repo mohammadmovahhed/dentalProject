@@ -6,7 +6,7 @@ namespace BLL_Prog_Dental
 {
     public class BLL_Report
     {
-        Dal_Report dbr = new Dal_Report();
+        private readonly Dal_Report dbr = new Dal_Report();
 
         public List<User> Read(string patientss)
         {

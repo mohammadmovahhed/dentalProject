@@ -210,7 +210,8 @@
             this.guna2GradientButton1.BorderRadius = 10;
             this.guna2GradientButton1.CheckedState.Parent = this.guna2GradientButton1;
             this.guna2GradientButton1.CustomImages.Parent = this.guna2GradientButton1;
-            this.guna2GradientButton1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
+            this.guna2GradientButton1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.guna2GradientButton1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.guna2GradientButton1.Font = new System.Drawing.Font("IRANSansWeb", 10.2F);
             this.guna2GradientButton1.ForeColor = System.Drawing.Color.White;
             this.guna2GradientButton1.HoverState.Parent = this.guna2GradientButton1;
@@ -563,7 +564,7 @@
             this.textBoxX1.Size = new System.Drawing.Size(685, 30);
             this.textBoxX1.TabIndex = 25;
             this.textBoxX1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBoxX1.WatermarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
+            this.textBoxX1.WatermarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.textBoxX1.WatermarkText = "جست و جو";
             this.textBoxX1.TextChanged += new System.EventHandler(this.TextBoxX1_TextChanged);
             // 
@@ -584,6 +585,7 @@
             this.textBoxXIdBimar.Size = new System.Drawing.Size(243, 30);
             this.textBoxXIdBimar.TabIndex = 26;
             this.textBoxXIdBimar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxXIdBimar.Visible = false;
             this.textBoxXIdBimar.WatermarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
             this.textBoxXIdBimar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxX2_KeyPress);
             // 
@@ -602,6 +604,7 @@
             this.labelCodeMelli.Style = DevComponents.DotNetBar.eDotNetBarStyle.OfficeMobile2014;
             this.labelCodeMelli.TabIndex = 27;
             this.labelCodeMelli.Text = "شماره پرونده بیمار";
+            this.labelCodeMelli.Visible = false;
             // 
             // UIVisit
             // 

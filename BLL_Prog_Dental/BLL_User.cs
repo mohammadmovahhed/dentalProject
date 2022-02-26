@@ -6,7 +6,7 @@ namespace BLL_Prog_Dental
 {
     public class BLL_User
     {
-        DAL_User DAL = new DAL_User();
+        private readonly DAL_User DAL = new DAL_User();
 
 
         public string Create(User BE)

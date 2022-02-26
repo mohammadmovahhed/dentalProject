@@ -6,7 +6,7 @@ namespace BLL_Prog_Dental
 {
     public class BLL_Visit
     {
-        DAL_Visit dal = new DAL_Visit();
+        private readonly DAL_Visit dal = new DAL_Visit();
         public List<User> ReadPatient()
         {
             return dal.ReadPatient();

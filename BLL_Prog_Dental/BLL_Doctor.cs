@@ -6,7 +6,7 @@ namespace BLL_Prog_Dental
 {
     public class BLL_Doctor
     {
-        DAL_Doctor dAL = new DAL_Doctor();
+        private readonly DAL_Doctor dAL = new DAL_Doctor();
 
         public string Create(Doctor doc)
         {

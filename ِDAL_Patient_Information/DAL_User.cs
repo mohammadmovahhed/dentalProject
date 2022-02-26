@@ -7,8 +7,7 @@ namespace DAL_Prog_Dental
     public class DAL_User
     {
         //CRUD : Create - Read - Update - Delete
-        DB_Support DB = new DB_Support();
-
+        private readonly DB_Support DB = new DB_Support();
 
         public string Create(User BE)
         {//ایجاد شی در بانک اطلاعاتی
@@ -37,24 +36,17 @@ namespace DAL_Prog_Dental
         public User Read(int id)
         {
             var q = DB.Users.Where(i => i.Id == id);
-            if (q.Count() == 1)
-            {
-                return q.Single();
-            }
-            return null;
+            return q.Count() == 1 ? q.Single() : null;
         }
 
         public List<User> Read()
         {
             return DB.Users.ToList();
         }
-
+                
         public string Update(int id, User BENew)
-        {
-            User BE = new User();
-
-            BE = Read(id);
-
+        {            
+            User BE = Read(id);
             BE.Name = BENew.Name;
             BE.CodeMelli = BENew.CodeMelli;
             BE.FatherName = BENew.FatherName;

@@ -5,22 +5,18 @@ using BE_ProgDental;
 
 namespace DAL_Prog_Dental
 {
-    public  class Dal_Report
+    public class Dal_Report
     {
-        DB_Support db = new DB_Support();
+        private readonly DB_Support db = new DB_Support();
         public List<User> Read(string patientss)
         {
             return db.Users.Where(i => i.Name.Contains(patientss) || i.CodeMelli.Contains(patientss)).ToList();
         }
 
-       public User Read(int id)
+        public User Read(int id)
         {
             var q = db.Users.Where(i => i.Id == id);
-            if (q.Count() ==1)
-            {
-                return q.Single();
-            }
-            return null;
+            return q.Count() == 1 ? q.Single() : null;
         }
 
 
@@ -36,17 +32,13 @@ namespace DAL_Prog_Dental
 
         public List<Doctor> Readdoc(string doctor)
         {
-            return db.Doctors.Where(i => i.Name.Contains(doctor) || i.NezamPezeshki.ToString().Contains(doctor)).ToList(); 
+            return db.Doctors.Where(i => i.Name.Contains(doctor) || i.NezamPezeshki.ToString().Contains(doctor)).ToList();
         }
 
         public Doctor Readdoc(int di)
         {
             var q = db.Doctors.Where(i => i.Id == di);
-            if (q.Count() == 1) 
-            {
-                return q.Single();
-            }
-            return null;
+            return q.Count() == 1 ? q.Single() : null;
         }
     }
 }

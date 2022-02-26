@@ -6,11 +6,8 @@ namespace DAL_Prog_Dental
 {
     public class DAL_Doctor
     {
-        DB_Support db = new DB_Support();
-
+        private readonly DB_Support db = new DB_Support();
         //create-read-update-delete
-
-
 
         public string Create(Doctor doc)
         {
@@ -33,36 +30,26 @@ namespace DAL_Prog_Dental
             }
         }
 
-
-
         public bool Read(Doctor doc)
         {
             return db.Doctors.Any(i => i.NezamPezeshki == doc.NezamPezeshki);
         }
-
 
         public List<Doctor> Read(string name)
         {
             return db.Doctors.Where(i => i.Name.Contains(name)).ToList();
         }
 
-
         public Doctor Read(int id)
         {
             var q = db.Doctors.Where(i => i.Id == id);
-            if (q.Count() == 1)
-            {
-                return q.Single();
-            }
-                return null;
+            return q.Count() == 1 ? q.Single() : null;
         }
-
 
         public List<Doctor> Read()
         {
             return db.Doctors.ToList();
         }
-
 
         public string Update(Doctor DocNew, int id)
         {
@@ -79,8 +66,6 @@ namespace DAL_Prog_Dental
             db.SaveChanges();
             return "بروزرسانی اطلاعات با موفقیت انجام شد";
         }
-
-
 
         public string Delete(int id)
         {

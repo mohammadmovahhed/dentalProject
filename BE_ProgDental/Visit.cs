@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BE_ProgDental
 {
@@ -13,10 +14,15 @@ namespace BE_ProgDental
         public string ZamanVisit { get; set; }
         public string HazineKol { get; set; }
         public string HazineVisit { get; set; }
-        public int Doctor_Id { get; set; }
-        public int User_Id { get; set; }
 
+        //relations 
+        [ForeignKey(nameof(Doctor))]
+        public int? Doctor_Id { get; set; }
         public virtual Doctor Doctor { get; set; }
+
+
+        [ForeignKey(nameof(User))]
+        public int? User_Id { get; set; }
         public virtual User User { get; set; }
     }
 }
